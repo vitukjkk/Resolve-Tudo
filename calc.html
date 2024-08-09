@@ -1,0 +1,143 @@
+<head>
+    <meta charset="UTF-8">
+    <title>Resolve Tudo - Página Inicial</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+        <a href="index.html" style="text-decoration: none;color:white;font-size:2rem">Resolve Tudo</a>
+    </header>
+    <main>
+        <script src="script.js"></script>
+      <div class="divGeral">
+        <h1>Geral</h1>
+        <form>
+          <label>adicione qualquer número ou operação</label><br>
+          <input
+            id="geralcalc"
+            type="text"
+            oninput="module = 1"> <br>
+          <button onclick="somarButton()">+</button>
+          <button onclick="subButton()">-</button>
+          <button onclick="divButton()">/</button>
+          <button onclick="multButton()">*</button>
+          <button onclick="equalButton();module = 1">=</button>
+          <br>
+          <button onclick="dotButton();module = 1">.</button>
+          <button onclick="leftParButton();module = 1">(</button>
+          <button onclick="rightParButton();module = 1">)</button>
+          <button onclick="clearButton();module = 1">C</button>
+          <button onclick="apagarButton();module = 1">A</button>
+        </form>
+      </div>
+      <div class="divMath">
+        <h1>Matemática</h1>
+        <label for="mathcalc">faça operações matemáticas</label><br>
+        <input
+               type="text"
+               id="mathcalc"
+               oninput="module = 2"> <br>
+        <button onclick="raizButton()">R</button>
+        <button onclick="potencyButton()">^</button>
+        <button onclick="percButton()">%</button>
+        <button onclick="moduleButton()">M</button>
+        <button onclick="factorButton()">!</button>
+        <button onclick="equalButton();module = 2">=</button><br>
+        <button onclick="dotButton();module = 2">.</button>
+        <button onclick="leftParButton();module = 2">(</button>
+        <button onclick="rightParButton();module = 2">)</button>
+        <button onclick="clearButton();module = 2">C</button>
+        <button onclick="apagarButton();module = 2">A</button>
+      </div>
+      <div class = "divCientific">
+        <h1>Científica</h1>
+        <label for="cientificcalc">faça cálculos mais complexos</label><br>
+        <input
+            id="cientificcalc"
+            type="text"
+            oninput="module = 3"> <br>
+        <button onclick="equalButton();module = 3">=</button><br>
+        <button onclick="dotButton();module = 3">.</button>
+        <button onclick="leftParButton();module = 3">(</button>
+        <button onclick="rightParButton();module = 3">)</button>
+        <button onclick="clearButton();module = 3">C</button>
+        <button onclick="apagarButton();module = 3">A</button>
+      </div>
+      <div class="divFinance">
+        <h1>Financeira</h1>
+        <label for="financecalc">faça operações financeiras</label><br>
+        <input
+            id="financecalc"
+            type="text"
+            oninput="module = 4"> <br>
+        <button onclick="equalButton();module = 4">=</button><br>
+        <button onclick="dotButton();module = 4">.</button>
+        <button onclick="leftParButton();module = 4">(</button>
+        <button onclick="rightParButton();module = 4">)</button>
+        <button onclick="clearButton();module = 4">C</button>
+        <button onclick="apagarButton();module = 4">A</button>
+      </div>
+      <div class="divGraphic">
+        <h1>Gráfica</h1>
+        <label for="graphiccalc">visualize seus dados</label><br>
+        <input
+            id="graphiccalc"
+            type="text"
+            oninput="module = 5"> <br>
+        <button onclick="equalButton();module = 5">=</button><br>
+        <button onclick="dotButton();module = 5">.</button>
+        <button onclick="leftParButton();module = 5">(</button>
+        <button onclick="rightParButton();module = 5">)</button>
+        <button onclick="clearButton();module = 5">C</button>
+        <button onclick="apagarButton();module = 5">A</button>
+      </div>
+      <div class="divStatstic">
+        <h1>Estatística</h1>
+        <label for="staticcalc">veja suas estatísticas</label><br>
+        <input
+            id="staticcalc"
+            type="text"
+            oninput="module = 6"> <br>
+        <button onclick="equalButton();module=6">=</button><br>
+        <button onclick="dotButton();module=6">.</button>
+        <button onclick="leftParButton();module=6">(</button>
+        <button onclick="rightParButton();module=6">)</button>
+        <button onclick="clearButton();module=6">C</button>
+        <button onclick="apagarButton();module=6">A</button>
+      </div>
+      <div class="divDate">
+        <h1>Data</h1>
+        <label for="datecalc">execute cálculos com datas</label><br>
+        <input
+            id="datecalc"
+            type="text"
+            oninput="module = 7"> <br>
+        <button onclick="equalButton();module=7">=</button><br>
+        <button onclick="dotButton();module=7">.</button>
+        <button onclick="leftParButton();module=7">(</button>
+        <button onclick="rightParButton();module=7">)</button>
+        <button onclick="clearButton();module=7">C</button>
+        <button onclick="apagarButton();module=7">A</button>
+      </div>
+      <div class="divEngenharia">
+        <h1>Engenharia</h1>
+        <label for="engcalc">cálculos de engenharia mais complexos</label><br>
+        <input
+            id="engcalc"
+            type="text"
+            oninput="module = 8"> <br>
+        <button onclick="equalButton();module=8">=</button><br>
+        <button onclick="dotButton();module=8">.</button>
+        <button onclick="leftParButton();module=8">(</button>
+        <button onclick="rightParButton();module=8">)</button>
+        <button onclick="clearButton();module=8">C</button>
+        <button onclick="apagarButton();module=8">A</button>
+      </div>
+    </main>
+    <footer>
+          Resolve Tudo - 2024 - desenvolvido por <a href="https://github.com/vitukjkkk">vitukjkkk</a>
+    </footer>
+  </body>
