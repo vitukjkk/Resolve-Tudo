@@ -1,0 +1,75 @@
+:root {
+    background-color: white;
+    font-family: "Playfair Display", serif;
+    font-style: bold;
+    font-size: 20px;
+    text-decoration: none;
+    overflow: auto;
+}
+header {
+  background-color: black;
+  color: white;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  text-align: center;
+
+  button {
+    width: auto;
+    display: inline-block;
+    text-align: center;
+    a {
+      text-decoration: none;
+      color: white;
+    }
+  }
+}
+
+footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+
+a {
+  color: gray;
+}
+
+li {
+  list-style: none;
+}
+
+.home {
+  display: flex;
+  justify-content: space-between;
+}
+
+.item {
+  padding: 2%;
+  border-right: solid 1px;
+  text-align: center;
+}
+
+input[type="text"] {
+  width: 50rem;
+  max-width: auto;
+  height: 2rem;
+  margin-top: 1rem;
+  font-family: var(--fonte);
+  font-size: 1.5rem;
+  text-align: center;
+  border-radius: .5rem;
+}
+
+button {
+  font-family: "Arial", sans-serif;
+  font-size: 1.5rem;
+  margin: 1rem;
+  width: 3.5rem;
+  background-color: black;
+  color: white;
+  border-radius: .5rem;
+}
