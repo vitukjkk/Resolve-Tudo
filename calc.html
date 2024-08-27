@@ -68,6 +68,8 @@
       <button onclick="clearButton();module = 3">C</button>
       <button onclick="apagarButton();module = 3">A</button>
     </div>
+
+
     <div class="divFinance">
       <h1>Financeira</h1>
       <label for="financecalc">faça operações financeiras</label><br>
@@ -75,14 +77,38 @@
           id="financecalc"
           type="text"
           oninput="module = 4"> <br>
-      <button onclick="jurosSimples();">JS</button>
-      <button onclick="equalButton();module = 4">=</button><br>
-      <button onclick="dotButton();module = 4">.</button>
-      <button onclick="leftParButton();module = 4">(</button>
-      <button onclick="rightParButton();module = 4">)</button>
-      <button onclick="clearButton();module = 4">C</button>
-      <button onclick="apagarButton();module = 4">A</button>
-    </div>
+			<div class="mainContents">
+				<div class="taxa">
+					<p>Insira a taxa</p>
+					<input 
+						type="text"
+						name="taxaInput"
+						id="taxaInput"><br>
+					<select id="taxaSelect">
+						<option value = "1">Diária</option>
+						<option value = "2">Mensal</option>
+						<option value = "3">Anual</option>
+					</select><br>
+				</div>
+				<div class="time">
+					<p>Insira o período</p>
+					<input 
+						type="text"
+						name="timeInput"
+						id="timeInput"><br>
+					<select id="timeSelect">
+						<option value = "1">Diário</option>
+						<option value = "2">Mensal</option>
+						<option value = "3">Anual</option>
+					</select><br>
+				</div>
+			</div>
+			<button onclick="jurosSimples();">JS</button>
+      <button onclick="jurosCompostos();">JC</button>
+      <button onclick="valorPresente();">VP</button>
+      <button onclick="valorFuturo();">VF</button>
+		</div>
+
     <div class="divGraphic">
       <h1>Gráfica</h1>
       <label for="graphiccalc">visualize seus dados</label><br>

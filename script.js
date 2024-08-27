@@ -1,32 +1,32 @@
-// VARIÁVEIS
-
-let body = document.getElementById("body");
-let geralBar = document.getElementById("geralcalc");
-let resultado = 0;
-let module = 0;
-
-const numberPermitidos = "0123456789+-/*,.()";
-
-var currentBar;
-
-var financecalc = document.getElementById("financecalc");
-
-var currentOption = 0;
-
-var taxaInput = document.getElementById("taxaInput");
-var taxaSelect = document.getElementById("taxaSelect");
-
-var timeInput = document.getElementById("timeInput");
-var timeSelect = document.getElementById("timeSelect");
-
 // FUNCTIONS
 
 // MANAGE
 
+function defineVariables() {
+  let body = document.getElementById("body");
+  let geralBar = document.getElementById("geralcalc");
+  let resultado = 0;
+  let module = 0;
+
+  const numberPermitidos = "0123456789+-/*,.()";
+
+  var currentBar;
+
+  var currentOption = 0;
+
+  var financecalc = document.getElementById("financecalc");
+
+  var taxaInput = document.getElementById("taxaInput");
+  var taxaSelect = document.getElementById("taxaSelect");
+  
+  var timeInput = document.getElementById("timeInput");
+  var timeSelect = document.getElementById("timeSelect");
+}
+
 function getCurrentInput() {
   switch(module) {  
     case 1: {
-      currentBar = geralBar;
+      currentBar = geralcalc;
       break;
     }
     case 2: {
@@ -113,144 +113,201 @@ function getDiasMes() {
 }
 
 class convertTime {
-constructor(capital, taxa, tempo) {
-  this.capital = document.getElementById("financecalc");
-  this.taxa = taxa;
-  this.tempo = tempo;
-  taxa /= 100;
-  try {
-    switch(currentOption) {
-      case 1:
-        switch(Number(timeSelect.value)) {
-          case 1: // DIÁRIO
-            switch(Number(taxaSelect.value)) {
-              case 1:
-                financecalc.value = (capital * taxa) * tempo;                  break;
-              case 2:
-                financecalc.value = (capital * taxa) * (tempo / 30);
-                break;
-              case 3:
-                financecalc.value = (capital * taxa) * (tempo / 360);
-                break;
-            }
-            break;
-          case 2: // MENSAL
-            switch(Number(taxaSelect.value)) {
-              case 1:
-                financecalc.value = (capital * taxa) * (tempo / 30);
-                break;
-              case 2:
-                financecalc.value = (capital * taxa) * tempo;
-                break;
-              case 3:
-                financecalc.value = (capital * (taxa / 12)) * tempo;
-                break;
-            }
-            break;
-          case 3: // ANUAL
-            switch(Number(taxaSelect.value)) {
-              case 1:
-                financecalc.value = capital * (taxa * 360) * tempo;
-                break;
-              case 2:
-                financecalc.value = capital * taxa * (tempo * 12);
-                break;
-              case 3:
-                financecalc.value = (capital * taxa) * tempo;
-                break;
-            }
-            break;
-        }
-        break;
-      case 2:
-        switch(Number(timeSelect.value)) {
-          case 1: // DIÁRIO
-            switch (Number(taxaSelect.value)) {
-              case 1:
-                financecalc.value = capital * (1 + taxa) ** tempo;
-                break;
-              case 2:
-                financecalc.value = capital * (1 + taxa / 30) ** tempo;
-                break;
-              case 3:
-                financecalc.value = capital * (1 + taxa / 360) ** tempo;
-                break;
-            }
-            break;
-          case 2: // Mensal
-            switch (Number(taxaSelect.value)) {
-              case 1:
-                financecalc.value = capital * (1 + taxa) ** (tempo * 12); 
-                break;
-              case 2:
-                financecalc.value = capital * (1 + taxa) ** tempo;
-                break;
-              case 3:
-                financecalc.value = capital * (1 + taxa / 12) ** tempo;
-                break;
-            }
-            break;
-          case 3: // Anual
-            switch (Number(taxaSelect.value)) {
-              case 1:
-                financecalc.value = capital * (1 + taxa) ** (tempo * 360); 
-                break;
-              case 2:
-                financecalc.value = capital * (1 + taxa / 12) ** tempo;
-                break;
-              case 3:
-                financecalc.value = capital * (1 + taxa) ** tempo;
-                break;
-            }
-            break;
-        }
-        break;
+  constructor(capital, taxa, tempo) {
+    defineVariables();
+    this.capital = document.getElementById("financecalc");
+    this.taxa = taxa;
+    this.tempo = tempo;
+    taxa /= 100;
+    try {
+      switch (currentOption) {
+        case 1:
+          //alert("opa mestre");
+          switch(parseInt(timeSelect.value)) {
+            case 1: // DIÁRIO
+              switch (parseInt(taxaSelect.value)) { 
+                case 1:
+                  financecalc.value = (capital * taxa) * tempo;
+                  break;
+                case 2:
+                  financecalc.value = (capital * taxa) * (tempo / 30);
+                  break;
+                case 3:
+                  financecalc.value = (capital * taxa) * (tempo / 360);
+                  break;
+              }
+              break;
+            case 2: // MENSAL
+              switch (parseInt(taxaSelect.value)) { 
+                case 1:
+                  financecalc.value = (capital * taxa) * (tempo / 30);
+                  break;
+                case 2:
+                  financecalc.value = (capital * taxa) * tempo;
+                  break;
+                case 3:
+                  financecalc.value = (capital * (taxa / 12)) * tempo;
+                  break;
+              }
+              break;
+            case 3: // ANUAL
+              switch (parseInt(taxaSelect.value)) { 
+                case 1:
+                  financecalc.value = capital * (taxa * 360) * tempo;
+                  break;
+                case 2:
+                  financecalc.value = capital * taxa * (tempo * 12);
+                  break;
+                case 3:
+                  financecalc.value = (capital * taxa) * tempo;
+                  break;
+              }
+              break;
+          }
+          break;
+        case 2:
+          switch (parseInt(timeSelect.value)) { 
+            case 1: // DIÁRIO
+              switch (parseInt(taxaSelect.value)) { 
+                case 1:
+                  financecalc.value = capital * (1 + taxa) ** tempo;
+                  break;
+                case 2:
+                  financecalc.value = capital * (1 + taxa / 30) ** tempo;
+                  break;
+                case 3:
+                  financecalc.value = capital * (1 + taxa / 360) ** tempo;
+                  break;
+              }
+              break;
+            case 2: // Mensal
+              switch (parseInt(taxaSelect.value)) { // Convert taxaSelect.value to integer
+                case 1:
+                  financecalc.value = capital * (1 + taxa) ** (tempo * 12);
+                  break;
+                case 2:
+                  financecalc.value = capital * (1 + taxa) ** tempo;
+                  break;
+                case 3:
+                  financecalc.value = capital * (1 + taxa / 12) ** tempo;
+                  break;
+              }
+              break;
+            case 3: // Anual
+              switch (parseInt(taxaSelect.value)) { // Convert taxaSelect.value to integer
+                case 1:
+                  financecalc.value = capital * (1 + taxa) ** (tempo * 360);
+                  break;
+                case 2:
+                  financecalc.value = capital * (1 + taxa / 12) ** tempo;
+                  break;
+                case 3:
+                  financecalc.value = capital * (1 + taxa) ** tempo;
+                  break;
+              }
+              break;
+          }
+          break;
+      }
+    } catch (e) {
+      alert(`Os dados foram inseridos no formato incorreto! Tente novamente, por favor.\nLOG: ${e.message}`);
     }
   }
-  catch(e) {
-    alert(`Os dados foram inseridos no formato incorreto! Tente novamente, por favor.\nLOG: ${e.message}`);
-  }
-}
 }
 
 
 // BUTTONS
 
+// FIXES
+
+function equalButton() {
+  try {
+    defineVariables();
+    getCurrentInput();
+    resultado = eval(currentBar.value);
+    currentBar.value = resultado;
+  }
+  catch(e) {
+    alert(`Ocorreu esse erro na expressão: ${e.Message}, tente novamente!`);
+  }
+}
+
+function dotButton() {
+  defineVariables();
+  getCurrentInput();
+  const valor = currentBar.value;
+  if(valor[valor.length - 1] === ".") return alert("Você já digitou o . !");
+  currentBar.value += "."; 
+}
+
+function leftParButton() {
+  defineVariables();
+  getCurrentInput();
+  currentBar.value += "(";
+}
+
+function rightParButton() {
+  defineVariables();
+  getCurrentInput();
+  currentBar.value += ")";
+}
+
+function clearButton() {
+  defineVariables();
+  getCurrentInput();
+  currentBar.value = "";
+}
+
+function apagarButton() {
+  defineVariables();
+  getCurrentInput();
+  const valor = currentBar.value;
+  if(valor === "") return alert("Não há mais nada a apagar!");
+  let lastChar = valor.length - 1;
+  alert(lastChar);
+}
+
 // GERAL
 
 function somarButton() {
-  const valor = geralBar.value;
+  defineVariables();
+  const valor = geralcalc.value;
   if(valor[valor.length - 1] === "+") return alert("Você já digitou o + !");
-  geralBar.value += "+";
+  geralcalc.value += "+";
 }
 
 function subButton() {
-  const valor = geralBar.value;
+  defineVariables();
+  const valor = geralcalc.value;
   if(valor[valor.length - 1] === "-") return alert("Você já digitou o - !");
-  geralBar.value += "-";
+  geralcalc.value += "-";
 }
 
 function divButton() {
-  const valor = geralBar.value;
+  defineVariables();
+  const valor = geralcalc.value;
   if(valor[valor.length - 1] === "/") return alert("Você já digitou o / !");
-  geralBar.value += "/"; 
+  geralcalc.value += "/"; 
 }
 
 function multButton() {
-  const valor = geralBar.value;
+  defineVariables();
+  const valor = geralcalc.value;
   if(valor[valor.length - 1] === "*") return alert("Você já digitou o * !");
-  geralBar.value += "*"; 
+  geralcalc.value += "*"; 
 }
 
 function raizButton() {
-  const valor = geralBar.value;
+  defineVariables();
+  const valor = geralcalc.value;
   if(valor[valor.length - 1] === "*") return alert("Você já digitou o * !");
-  geralBar.value += "*"; 
+  geralcalc.value += "*"; 
 }
 
 // MATH
 
 function raizButton() {
+  defineVariables();
   const valor = mathcalc.value;
   if(valor <= 0) return alert("Não pode calcular raiz de 0 ou números negativos!");
   let resultado = Math.sqrt(valor);
@@ -258,6 +315,7 @@ function raizButton() {
 }
 
 function potencyButton() {
+  defineVariables();
   var valor = Number(mathcalc.value);
   if(valor === 0 || valor === 1) return alert(`O valor da base ${valor} elevada a qualquer potência é igual a ${valor}`);
   var potencia = Number(prompt("Insira a potência que será elevada: "));
@@ -276,6 +334,7 @@ function potencyButton() {
 }
 
 function percButton() {
+  defineVariables();
   var valor = Number(mathcalc.value);
   if(valor === 0) return alert("Em cálculos de porcentagem você não pode começar com 0!");
   var porcentagem = Number(prompt("Insira quantos % você deseja calcular"));
@@ -284,6 +343,7 @@ function percButton() {
 }
 
 function moduleButton() {
+  defineVariables();
   var modulado = Number(mathcalc.value);
   var modulador = Number(prompt("Insira por quanto você quer dividir"));
   var resultado = modulado % modulador;
@@ -291,6 +351,7 @@ function moduleButton() {
 }
 
 function factorButton() {
+  defineVariables();
   var valor = Number(mathcalc.value);
   if (valor < 0) return alert("Você não pode calcular o fatorial de números negativos!");
   if (valor === 0 || valor === 1) return alert(`O fatorial de ${valor} é 1!`);
@@ -305,6 +366,7 @@ function factorButton() {
 // FINANCEIRA
 
 function jurosSimples() {
+  defineVariables();
   var capital = Number(financecalc.value);
   if(capital <= 0) return alert("Você não pode fazer operações com números negativos ou zero!");
   if(taxaInput.value <= 0) return alert("Você não pode calcular sem taxa!");
@@ -314,6 +376,7 @@ function jurosSimples() {
 }
 
 function jurosCompostos() {
+  defineVariables();
   var capital = Number(financecalc.value);
   if(capital <= 0) return alert("Você não pode fazer operações com números negativos ou zero!");
   if(taxaInput.value <= 0) return alert("Você não pode calcular sem taxa!");
@@ -323,77 +386,9 @@ function jurosCompostos() {
 }
 
 function valorPresente() {
-  try {
-    var capital = Number(financecalc.value);
-    if (capital <= 0) return alert("Você não pode calcular juros de números negativos ou zero!"); 
-    var valorPresente = Number(prompt("Insira o valor do valor futuro"));
-    var taxa = Number(prompt("Insira a taxa (não insira %)"));
-    var tempo = Number(prompt("Insira o tempo (apenas números)"));
-    var resultado = valorPresente / (1 + taxa)**tempo;
-    financecalc.value = resultado;
-  }
-  catch(e) {
-    alert(`Ocorreu um erro no cálculo! Verifique se você seguiu todas as orientações certas :)\n${e.Message}`);
-  }
+  defineVariables();
 }
 
 function valorFuturo() {
-  try {
-    var capital = Number(financecalc.value);
-    if (capital <= 0) return alert("Você não pode calcular juros de números negativos ou zero!"); 
-    var valorFuturo = Number(prompt("Insira o valor do valor futuro"));
-    var taxa = Number(prompt("Insira a taxa (não insira %)"));
-    var tempo = Number(prompt("Insira o tempo (apenas números)"));
-    var resultado = valorFuturo / (1 + taxa)**tempo;
-    financecalc.value = resultado;
-  }
-  catch(e) {
-    alert(`Ocorreu um erro no cálculo! Verifique se você seguiu todas as orientações certas :)\n${e.Message}`);
-  }
+  defineVariables();z
 }
-
-// VARIABLES
-
-function equalButton() {
-  try {
-    getCurrentInput();
-    resultado = eval(currentBar.value);
-    currentBar.value = resultado;
-  }
-  catch(e) {
-    alert(`Ocorreu esse erro na expressão: ${e.Message}, tente novamente!`);
-  }
-}
-
-function dotButton() {
-  getCurrentInput();
-  const valor = currentBar.value;
-  if(valor[valor.length - 1] === ".") return alert("Você já digitou o . !");
-  currentBar.value += "."; 
-}
-
-function leftParButton() {
-  getCurrentInput();
-  currentBar.value += "(";
-}
-
-function rightParButton() {
-  getCurrentInput();
-  currentBar.value += ")";
-}
-
-function clearButton() {
-  getCurrentInput();
-  currentBar.value = "";
-}
-
-function apagarButton() {
-  getCurrentInput();
-  const valor = currentBar.value;
-  if(valor === "") return alert("Não há mais nada a apagar!");
-  let lastChar = valor.length - 1;
-  alert(lastChar);
-}
-
-
-

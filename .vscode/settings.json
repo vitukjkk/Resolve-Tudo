@@ -1,5 +1,6 @@
 {
     "liveServer.settings.port": 5501,
     "files.autoSave": "afterDelay",
-    "files.autoSaveDelay": 1000
+    "files.autoSaveDelay": 1000,
+    "editor.minimap.enabled": false
 }
