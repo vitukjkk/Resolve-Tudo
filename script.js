@@ -9,6 +9,16 @@ const numberPermitidos = "0123456789+-/*,.()";
 
 var currentBar;
 
+var financecalc = document.getElementById("financecalc");
+
+var currentOption = 0;
+
+var taxaInput = document.getElementById("taxaInput");
+var taxaSelect = document.getElementById("taxaSelect");
+
+var timeInput = document.getElementById("timeInput");
+var timeSelect = document.getElementById("timeSelect");
+
 // FUNCTIONS
 
 // MANAGE
@@ -49,6 +59,160 @@ function getCurrentInput() {
     }
   }
 }
+
+function getDiasMes() {
+  const dataAtual = new Date();
+  const mes = dataAtual.getMonth() + 1;
+  const ano = dataAtual.getFullYear();
+  switch(mes) {
+      case 1:
+          mes = 31;
+          break;
+      case 2:
+          if(ano % 400 === 0) {
+              mes = 29;
+              break;
+          }
+          else {
+              mes = 28;
+              break;
+          }
+          break;
+      case 3:
+          mes = 31;
+          break;
+      case 4:
+          mes = 3;
+          break;
+      case 5:
+          mes = 31;
+          break;
+      case 6:
+          mes = 30;
+          break;
+      case 7:
+          mes = 31;
+          break;
+      case 8:
+          mes = 31;
+          break;
+      case 9:
+          mes = 30;
+          break;
+      case 10:
+          mes = 31;
+          break;
+      case 11:
+          mes = 30;
+          break;
+      case 12:
+          mes = 31;
+          break;
+  }
+  return mes;
+}
+
+class convertTime {
+constructor(capital, taxa, tempo) {
+  this.capital = document.getElementById("financecalc");
+  this.taxa = taxa;
+  this.tempo = tempo;
+  taxa /= 100;
+  try {
+    switch(currentOption) {
+      case 1:
+        switch(Number(timeSelect.value)) {
+          case 1: // DIÁRIO
+            switch(Number(taxaSelect.value)) {
+              case 1:
+                financecalc.value = (capital * taxa) * tempo;                  break;
+              case 2:
+                financecalc.value = (capital * taxa) * (tempo / 30);
+                break;
+              case 3:
+                financecalc.value = (capital * taxa) * (tempo / 360);
+                break;
+            }
+            break;
+          case 2: // MENSAL
+            switch(Number(taxaSelect.value)) {
+              case 1:
+                financecalc.value = (capital * taxa) * (tempo / 30);
+                break;
+              case 2:
+                financecalc.value = (capital * taxa) * tempo;
+                break;
+              case 3:
+                financecalc.value = (capital * (taxa / 12)) * tempo;
+                break;
+            }
+            break;
+          case 3: // ANUAL
+            switch(Number(taxaSelect.value)) {
+              case 1:
+                financecalc.value = capital * (taxa * 360) * tempo;
+                break;
+              case 2:
+                financecalc.value = capital * taxa * (tempo * 12);
+                break;
+              case 3:
+                financecalc.value = (capital * taxa) * tempo;
+                break;
+            }
+            break;
+        }
+        break;
+      case 2:
+        switch(Number(timeSelect.value)) {
+          case 1: // DIÁRIO
+            switch (Number(taxaSelect.value)) {
+              case 1:
+                financecalc.value = capital * (1 + taxa) ** tempo;
+                break;
+              case 2:
+                financecalc.value = capital * (1 + taxa / 30) ** tempo;
+                break;
+              case 3:
+                financecalc.value = capital * (1 + taxa / 360) ** tempo;
+                break;
+            }
+            break;
+          case 2: // Mensal
+            switch (Number(taxaSelect.value)) {
+              case 1:
+                financecalc.value = capital * (1 + taxa) ** (tempo * 12); 
+                break;
+              case 2:
+                financecalc.value = capital * (1 + taxa) ** tempo;
+                break;
+              case 3:
+                financecalc.value = capital * (1 + taxa / 12) ** tempo;
+                break;
+            }
+            break;
+          case 3: // Anual
+            switch (Number(taxaSelect.value)) {
+              case 1:
+                financecalc.value = capital * (1 + taxa) ** (tempo * 360); 
+                break;
+              case 2:
+                financecalc.value = capital * (1 + taxa / 12) ** tempo;
+                break;
+              case 3:
+                financecalc.value = capital * (1 + taxa) ** tempo;
+                break;
+            }
+            break;
+        }
+        break;
+    }
+  }
+  catch(e) {
+    alert(`Os dados foram inseridos no formato incorreto! Tente novamente, por favor.\nLOG: ${e.message}`);
+  }
+}
+}
+
 
 // BUTTONS
 
@@ -142,51 +306,49 @@ function factorButton() {
 
 function jurosSimples() {
   var capital = Number(financecalc.value);
-  if (capital <= 0) return alert("Você não pode calcular juros de números negativos ou zero!");
-  var taxa = Number(prompt("Insira a taxa de juros (não coloque %)"));
-  var taxaType = Number(prompt("Insira a recorrência:\n[1] Diário\n[2] Mensal\n[3] Anual"));
-  var tempo = Number(prompt("Insira o período"));
-  var tempoType = Number(prompt("Insira a recorrência:\n[1] Diário\n[2] Mensal\n[3] Anual"));
-  var resultado = 0;
+  if(capital <= 0) return alert("Você não pode fazer operações com números negativos ou zero!");
+  if(taxaInput.value <= 0) return alert("Você não pode calcular sem taxa!");
+  if(timeInput.value <= 0) return alert("Você não pode calcular sem tempo!");
+  currentOption = 1;
+  const converter = new convertTime(capital, taxaInput.value, timeInput.value);
+}
+
+function jurosCompostos() {
+  var capital = Number(financecalc.value);
+  if(capital <= 0) return alert("Você não pode fazer operações com números negativos ou zero!");
+  if(taxaInput.value <= 0) return alert("Você não pode calcular sem taxa!");
+  if(timeInput.value <= 0) return alert("Você não pode calcular sem tempo!");
+  currentOption = 2;
+  const converter = new convertTime(capital, taxaInput.value, timeInput.value);
+}
+
+function valorPresente() {
   try {
-    switch(tempoType) {
-      case 1: // DIÁRIO
-        switch(taxaType) {
-          case 1:
-            resultado = (capital * taxa) * tempo;
-            break;
-          case 2:
-            
-            break;
-          case 3:
-            break;
-        }
-        break;
-      case 2: // MENSAL
-        switch(taxaType) {
-          case 1:
-            
-            break;
-          case 2:
-            break;
-          case 3:
-            break;
-        }
-        break;
-      case 3: // ANUAL
-        switch(taxaType) {
-          case 1:
-            break;
-          case 2:
-            break;
-          case 3:
-            break;
-        }
-        break;
-    }
+    var capital = Number(financecalc.value);
+    if (capital <= 0) return alert("Você não pode calcular juros de números negativos ou zero!"); 
+    var valorPresente = Number(prompt("Insira o valor do valor futuro"));
+    var taxa = Number(prompt("Insira a taxa (não insira %)"));
+    var tempo = Number(prompt("Insira o tempo (apenas números)"));
+    var resultado = valorPresente / (1 + taxa)**tempo;
+    financecalc.value = resultado;
   }
   catch(e) {
-    alert(`Os dados foram inseridos no formato incorreto! Tente novamente, por favor.\nLOG: ${e.Message}`);
+    alert(`Ocorreu um erro no cálculo! Verifique se você seguiu todas as orientações certas :)\n${e.Message}`);
+  }
+}
+
+function valorFuturo() {
+  try {
+    var capital = Number(financecalc.value);
+    if (capital <= 0) return alert("Você não pode calcular juros de números negativos ou zero!"); 
+    var valorFuturo = Number(prompt("Insira o valor do valor futuro"));
+    var taxa = Number(prompt("Insira a taxa (não insira %)"));
+    var tempo = Number(prompt("Insira o tempo (apenas números)"));
+    var resultado = valorFuturo / (1 + taxa)**tempo;
+    financecalc.value = resultado;
+  }
+  catch(e) {
+    alert(`Ocorreu um erro no cálculo! Verifique se você seguiu todas as orientações certas :)\n${e.Message}`);
   }
 }
 
