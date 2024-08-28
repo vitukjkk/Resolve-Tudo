@@ -39,6 +39,8 @@ function getCurrentInput() {
     }
     case 4: {
       currentBar = financecalc; 
+      timeInput.value = null;
+      taxaInput.value = null;
       break;
     }
     case 5: {
