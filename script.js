@@ -121,7 +121,7 @@ class convertTime {
     taxa /= 100;
     try {
       switch (currentOption) {
-        case 1:
+        case 1: // JUROS SIMPLES
           //alert("opa mestre");
           switch(parseInt(timeSelect.value)) {
             case 1: // DIÁRIO
@@ -165,7 +165,7 @@ class convertTime {
               break;
           }
           break;
-        case 2:
+        case 2: // JUROS COMPOSTOS
           switch (parseInt(timeSelect.value)) { 
             case 1: // DIÁRIO
               switch (parseInt(taxaSelect.value)) { 
@@ -208,6 +208,94 @@ class convertTime {
               break;
           }
           break;
+        case 3: { // VALOR PRESENTE
+          switch (parseInt(timeSelect.value)) { 
+            case 1: // DIÁRIO
+              switch (parseInt(taxaSelect.value)) { 
+                case 1:
+                  financecalc.value = capital / (1 + taxa) ** tempo;
+                  break;
+                case 2:
+                  financecalc.value = capital / (1 + (taxa / 30)) ** tempo;
+                  break;
+                case 3:
+                  financecalc.value = capital / (1 + (taxa / 360)) ** tempo;
+                  break;
+              }
+              break;
+            case 2: // Mensal
+              switch (parseInt(taxaSelect.value)) { 
+                case 1:
+                  financecalc.value = capital / (1 + taxa) ** (tempo * 12);
+                  break;
+                case 2:
+                  financecalc.value = capital / (1 + taxa) ** tempo;
+                  break;
+                case 3:
+                  financecalc.value = capital / (1 + taxa / 12) ** tempo;
+                  break;
+              }
+              break;
+            case 3: // Anual
+              switch (parseInt(taxaSelect.value)) { // Convert taxaSelect.value to integer
+                case 1:
+                  financecalc.value = capital / (1 + taxa) ** (tempo * 360);
+                  break;
+                case 2:
+                  financecalc.value = capital / (1 + (taxa / 12)) ** tempo;
+                  break;
+                case 3:
+                  financecalc.value = capital / (1 + taxa) ** tempo;
+                  break;
+              }
+              break;
+          }  
+          break;
+        }
+        case 4: { // VALOR FUTURO
+          switch (parseInt(timeSelect.value)) { 
+            case 1: // DIÁRIO
+              switch (parseInt(taxaSelect.value)) { 
+                case 1:
+                  financecalc.value = capital * (1 + taxa) ** tempo;
+                  break;
+                case 2:
+                  financecalc.value = capital * (1 + taxa / 30) ** tempo;
+                  break;
+                case 3:
+                  financecalc.value = capital * (1 + taxa / 360) ** tempo;
+                  break;
+              }
+              break;
+            case 2: // Mensal
+              switch (parseInt(taxaSelect.value)) { // Convert taxaSelect.value to integer
+                case 1:
+                  financecalc.value = capital * (1 + taxa) ** (tempo * 12);
+                  break;
+                case 2:
+                  financecalc.value = capital * (1 + taxa) ** tempo;
+                  break;
+                case 3:
+                  financecalc.value = capital * (1 + taxa / 12) ** tempo;
+                  break;
+              }
+              break;
+            case 3: // Anual
+              switch (parseInt(taxaSelect.value)) { // Convert taxaSelect.value to integer
+                case 1:
+                  financecalc.value = capital * (1 + taxa) ** (tempo * 360);
+                  break;
+                case 2:
+                  financecalc.value = capital * (1 + taxa / 12) ** tempo;
+                  break;
+                case 3:
+                  financecalc.value = capital * (1 + taxa) ** tempo;
+                  break;
+              }
+              break;
+          }
+          break;
+        }
       }
     } catch (e) {
       alert(`Os dados foram inseridos no formato incorreto! Tente novamente, por favor.\nLOG: ${e.message}`);
