@@ -387,8 +387,20 @@ function jurosCompostos() {
 
 function valorPresente() {
   defineVariables();
+  var capital = Number(financecalc.value);
+  if(capital <= 0) return alert("Você não pode fazer operações com números negativos ou zero!");
+  if(taxaInput.value <= 0) return alert("Você não pode calcular sem taxa!");
+  if(timeInput.value <= 0) return alert("Você não pode calcular sem tempo!");
+  currentOption = 3;
+  const converter = new convertTime(capital, taxaInput.value, timeInput.value);
 }
 
 function valorFuturo() {
-  defineVariables();z
+  defineVariables();
+  var capital = Number(financecalc.value);
+  if(capital <= 0) return alert("Você não pode fazer operações com números negativos ou zero!");
+  if(taxaInput.value <= 0) return alert("Você não pode calcular sem taxa!");
+  if(timeInput.value <= 0) return alert("Você não pode calcular sem tempo!");
+  currentOption = 4;
+  const converter = new convertTime(capital, taxaInput.value, timeInput.value);
 }
