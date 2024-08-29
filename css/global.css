@@ -18,6 +18,10 @@ header {
     color:white;
     font-size:2rem
   }
+  ul {
+    display: flex;
+    justify-content: space-around;
+  }
 }
 
 main {
