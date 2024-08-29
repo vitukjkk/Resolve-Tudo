@@ -1,0 +1,92 @@
+<head>
+    <meta charset="UTF-8">
+    <title>Resolve Tudo - Página Inicial</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="icon" href="../assets/images/logo_resolve tudo azul.png">
+    <script src="../script/buttons.js"></script>
+    <script src="../script/manage.js"></script>
+</head>
+<body>
+    <header>
+        <a href="../index.html">Resolve Tudo</a>
+        <nav>
+          <ul>
+            <a href="../modulos/geral.html">
+              <li>GERAL</li>
+            </a>
+            <a href="../modulos/matematica.html">
+              <li>MATEMÁTICA</li>
+            </a>
+            <a href="../modulos/cientifica.html">
+              <li>CIENTÍFICA</li>
+            </a>
+            <a href="../modulos/finance.html">
+              <li>FINANCEIRA</li>
+            </a>
+            <a href="../modulos/estatistica.html">
+              <li>ESTATÍSTICA</li>
+            </a>
+            <a href="../modulos/grafica.html">
+              <li>GRÁFICA</li>
+            </a>
+            <a href="../modulos/data.html">
+              <li>DATA</li>
+            </a>
+            <a href="../modulos/engenharia.html">
+              <li>ENGENHARIA</li>
+            </a>
+          </ul>
+        </nav>
+      </header>
+    <main>
+        <h1>Matemática</h1>
+        <div class="home">
+          <div class="item">
+            <h3>Raiz</h3>
+            <p>número elevado a uma potência que resulta em</p>
+          </div>
+          <div class="item">
+            <h3>Potência</h3>
+            <p>eleva o número a um expoente</p>
+          </div>
+          <div class="item">
+            <h3>Porcentagem</h3>
+            <p>representação de um número na fração de 100</p>
+          </div>
+          <div class="item">
+            <h3>Módulo</h3>
+            <p>quanto resta após sua divisão</p>
+          </div>
+          <div style="padding:2%">
+            <h3>Fatorial</h3>
+            <p>produto de todos os números inteiros de sua base</p>
+          </div>
+        </div>
+        <br>
+        <br>
+        <div class="divMath">
+            <label for="mathcalc">faça operações matemáticas</label><br>
+            <input
+                   type="text"
+                   id="mathcalc"
+                   oninput="module = 2"> <br>
+            <button onclick="raizButton()">R</button>
+            <button onclick="potencyButton()">^</button>
+            <button onclick="percButton()">%</button>
+            <button onclick="moduleButton()">M</button>
+            <button onclick="factorButton()">!</button>
+            <button onclick="equalButton();module = 2">=</button><br>
+            <button onclick="dotButton();module = 2">.</button>
+            <button onclick="leftParButton();module = 2">(</button>
+            <button onclick="rightParButton();module = 2">)</button>
+            <button onclick="clearButton();module = 2">C</button>
+            <button onclick="apagarButton();module = 2">A</button>
+          </div>
+    </main>
+    <footer>
+        Resolve Tudo - 2024 - desenvolvido por <a href="https://github.com/vitukjkk">vitukjkkk</a>
+    </footer>
+</body>

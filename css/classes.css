@@ -1,0 +1,19 @@
+.home {
+    display: flex;
+    justify-content: space-between;
+}
+
+.mainContents {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    input[type="text"] {
+        width: 9rem;
+    }
+}
+
+.item {
+    padding: 2%;
+    border-right: solid 1px;
+    text-align: center;
+}
