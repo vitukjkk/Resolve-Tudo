@@ -120,7 +120,6 @@ function defineVariables() {
       try {
         switch (currentOption) {
           case 1: // JUROS SIMPLES
-            //alert("opa mestre");
             switch(parseInt(timeSelect.value)) {
               case 1: // DIÁRIO
                 switch (parseInt(taxaSelect.value)) { 

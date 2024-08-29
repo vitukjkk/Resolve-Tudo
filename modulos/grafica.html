@@ -1,0 +1,88 @@
+<head>
+    <meta charset="UTF-8">
+    <title>Resolve Tudo - Gráfica</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="icon" href="../assets/images/logo_resolve tudo azul.png">
+    <script src="../script/buttons.js"></script>
+    <script src="../script/manage.js"></script>
+</head>
+<body>
+    <header>
+        <a href="../index.html">Resolve Tudo</a>
+        <nav>
+            <ul>
+            <a href="../modulos/geral.html">
+                <li>GERAL</li>
+            </a>
+            <a href="../modulos/matematica.html">
+                <li>MATEMÁTICA</li>
+            </a>
+            <a href="../modulos/cientifica.html">
+                <li>CIENTÍFICA</li>
+            </a>
+            <a href="../modulos/finance.html">
+                <li>FINANCEIRA</li>
+            </a>
+            <a href="../modulos/estatistica.html">
+                <li>ESTATÍSTICA</li>
+            </a>
+            <a href="../modulos/grafica.html">
+                <li>GRÁFICA</li>
+            </a>
+            <a href="../modulos/data.html">
+                <li>DATA</li>
+            </a>
+            <a href="../modulos/engenharia.html">
+                <li>ENGENHARIA</li>
+            </a>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="divGrafica">
+            <h1>Gráfica</h1>
+            <label for="grafcalc">faça operações gráficas</label><br>
+            <br>
+            <div class="home">
+              <div class="item">
+                <h3>Gráfico de funções</h3>
+                <p>representação visual de uma função matemática</p>
+              </div>
+              <div class="item">
+                <h3>Gráfico de equações</h3>
+                <p>representação visual de uma equação matemática</p>
+              </div>
+              <div class="item">
+                <h3>Gráfico de pontos</h3>
+                <p>representação visual de pontos em um plano cartesiano</p>
+              </div>
+              <div style="padding:2%">
+                <h3>Gráfico de barras</h3>
+                <p>representação visual de dados em barras</p>
+              </div>
+            </div>
+        </div>
+        <br><br>
+        <div class="divGraphic">
+            <label for="graphiccalc">visualize seus dados</label><br>
+            <br>
+            <input
+                id="graphiccalc"
+                type="text"
+                oninput="module = 5"
+                placeholder="EM BREVE"> <br>
+            <button onclick="equalButton();module = 5">=</button><br>
+            <button onclick="dotButton();module = 5">.</button>
+            <button onclick="leftParButton();module = 5">(</button>
+            <button onclick="rightParButton();module = 5">)</button>
+            <button onclick="clearButton();module = 5">C</button>
+            <button onclick="apagarButton();module = 5">A</button>
+          </div>
+    </main>
+    <footer>
+        Resolve Tudo - 2024 - desenvolvido por <a href="https://github.com/vitukjkk">vitukjkkk</a>
+    </footer>
+</body>

@@ -1,6 +1,6 @@
 <head>
     <meta charset="UTF-8">
-    <title>Resolve Tudo - Página Inicial</title>
+    <title>Resolve Tudo - Financeira</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
@@ -45,7 +45,38 @@
         <div class="divFinance">
             <h1>Financeira</h1>
             <label for="financecalc">faça operações financeiras</label><br>
-      
+            <br>
+            <div class="home">
+              <div class="item">
+                <h3>Amortização</h3>
+                <p>redução gradual da dívida</p>
+              </div>
+              <div class="item">
+                <h3>Juros</h3>
+                <p>percentual aplicado no capital inicial</p>
+              </div>
+              <div class="item">
+                <h3>PV / FV</h3>
+                <p>valor presente e futuro</p>
+              </div>
+              <div class="item">
+                <h3>Período de retorno</h3>   
+                <p>tempo necessário para recuperar o investimento inicial</p>
+              </div>
+              <div class="item">  
+                <h3>Rentabilidade</h3>
+                <p>medida do retorno obtido</p>
+              </div>
+              <div class="item">
+               <h3>Impostos</h3>
+                </p>encargos pagos aos Estado</p>
+              </div>
+              <div style="padding:2%">
+                <h3>Descontos</h3>
+                <p>reduções no valor</p>
+              </div>
+            </div>
+
             <div class="divJuros">
               <h1>Juros</h1>
               <input
@@ -60,9 +91,9 @@
                     name="taxaInput"
                     id="taxaInput"><br>
                   <select id="taxaSelect">
-                    <option value = "1">Diária</option>
-                    <option value = "2">Mensal</option>
-                    <option value = "3">Anual</option>
+                    <option value = 1>Diária</option>
+                    <option value = 2>Mensal</option>
+                    <option value = 3>Anual</option>
                   </select><br>
                 </div>
                 <div class="time">
@@ -72,55 +103,14 @@
                     name="timeInput"
                     id="timeInput"><br>
                   <select id="timeSelect">
-                    <option value = "1">Diário</option>
-                    <option value = "2">Mensal</option>
-                    <option value = "3">Anual</option>
+                      <option value = 1>Diário</option>
+                      <option value = 2>Mensal</option>
+                      <option value = 3>Anual</option>
                   </select><br>
                 </div>
               </div>
               <button onclick="jurosSimples();">JS</button>
               <button onclick="jurosCompostos();">JC</button>
-      
-              <button onclick="clearButton();module = 4">C</button>
-              <button onclick="valorPresente();">VP</button>
-              <button onclick="valorFuturo();">VF</button>
-            </div>
-      
-            <div class="divInvestimentos">
-              <h1>Investimentos</h1>
-              <input
-                  id="investcalc"
-                  type="text"
-                  oninput="module = 4"> <br>
-              <div class="mainContents">
-                <div class="taxa">
-                  <p>Insira a taxa</p>
-                  <input 
-                    type="text"
-                    name="taxaInput"
-                    id="taxaInput"><br>
-                  <select id="taxaSelect">
-                    <option value = "1">Diária</option>
-                    <option value = "2">Mensal</option>
-                    <option value = "3">Anual</option>
-                  </select><br>
-                </div>
-                <div class="time">
-                  <p>Insira o período</p>
-                  <input 
-                    type="text"
-                    name="timeInput"
-                    id="timeInput"><br>
-                  <select id="timeSelect">
-                    <option value = "1">Diário</option>
-                    <option value = "2">Mensal</option>
-                    <option value = "3">Anual</option>
-                  </select><br>
-                </div>
-              </div>
-              <button onclick="jurosSimples();">JS</button>
-              <button onclick="jurosCompostos();">JC</button>
-      
               <button onclick="clearButton();module = 4">C</button>
               <button onclick="valorPresente();">VP</button>
               <button onclick="valorFuturo();">VF</button>
