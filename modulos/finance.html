@@ -1,0 +1,182 @@
+<head>
+    <meta charset="UTF-8">
+    <title>Resolve Tudo - Financeira</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="icon" href="../assets/images/logo_resolve tudo azul.png">
+    <script src="../script/buttons.js"></script>
+    <script src="../script/manage.js"></script>
+</head>
+<body>
+    <header>
+        <a href="../index.html">Resolve Tudo</a>
+        <nav>
+            <ul>
+            <a href="../modulos/geral.html">
+                <li>GERAL</li>
+            </a>
+            <a href="../modulos/matematica.html">
+                <li>MATEMÁTICA</li>
+            </a>
+            <a href="../modulos/cientifica.html">
+                <li>CIENTÍFICA</li>
+            </a>
+            <a href="../modulos/finance.html">
+                <li>FINANCEIRA</li>
+            </a>
+            <a href="../modulos/estatistica.html">
+                <li>ESTATÍSTICA</li>
+            </a>
+            <a href="../modulos/grafica.html">
+                <li>GRÁFICA</li>
+            </a>
+            <a href="../modulos/data.html">
+                <li>DATA</li>
+            </a>
+            <a href="../modulos/engenharia.html">
+                <li>ENGENHARIA</li>
+            </a>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="divFinance">
+            <h1>Financeira</h1>
+            <label for="financecalc">faça operações financeiras</label><br>
+            <br>
+            <div class="home">
+              <div class="item">
+                <h3>Amortização</h3>
+                <p>redução gradual da dívida</p>
+              </div>
+              <div class="item">
+                <h3>Investimentos</h3>
+                <p>veja as métricas dos seus investimentos</p>
+              </div>
+              <div class="item">
+                <h3>Juros</h3>
+                <p>percentual aplicado no capital inicial</p>
+              </div>
+              <div class="item">
+                <h3>PV / FV</h3>
+                <p>valor presente e futuro</p>
+              </div>
+              <div class="item">
+                <h3>Período de retorno</h3>   
+                <p>tempo necessário para recuperar o investimento inicial</p>
+              </div>
+              <div class="item">  
+                <h3>Rentabilidade</h3>
+                <p>medida do retorno obtido</p>
+              </div>
+              <div class="item">
+               <h3>Impostos</h3>
+                </p>encargos pagos aos Estado</p>
+              </div>
+              <div style="padding:2%">
+                <h3>Descontos</h3>
+                <p>reduções no valor</p>
+              </div>
+            </div>
+
+            <div class="divInvestimentos">
+              <h2>Investimentos</h2>
+              <label for="investimentoscalc">veja as métricas dos seus investimentos</p>
+              <input
+                type="text"
+                id="investimentoscalc"
+                name="investimentoscalc"><br>
+
+              <div class="mainContents">
+
+                <div class="taxa">
+                  <label for="investimentosTaxa">Insira a taxa</p>
+                  <input
+                    type="text"
+                    id="investTaxaInput"
+                    name="investTaxaInput"><br>
+                  <select id="investimentosTaxa">
+                    <option value="1">Diária</option>
+                    <option value="2">Mensal</option>
+                    <option value="3">Anual</option>
+                  </select>
+                </div>
+
+                <div class="time">
+                  <label for="investimentosTime">Insira o período</p>
+                  <input
+                    type="text"
+                    id="investTimeInput"
+                    name="investTimeInput"><br>
+                  <select id="investimentosTime">
+                    <option value="1">Diário</option>
+                    <option value="2">Mensal</option>
+                    <option value="3">Anual</option>
+                  </select><br>
+                </div>
+
+                <div class="ir">
+                  <label for="investimentosIR">Insira o Imposto de Renda</p>
+                    <input
+                      type="text"
+                      id="investIRInput" 
+                      name="investIRInput"><br>
+                </div>
+              </div>
+
+              <button onclick="cdbFunction()">CDB</button>
+              <button onclick="lciFunction()">LCI</button>
+              <button onclick="lcaFunction()">LCA</button>
+            </div>
+
+            <div class="divJuros">
+              <h2>Juros</h2>
+              <label for="financecalc">percentual aplicado no capital inicial</p>
+              <input
+                  id="financecalc"
+                  type="text"
+                  oninput="module = 4"> <br>
+              <div class="mainContents">
+
+                <div class="taxa">
+                  <p>Insira a taxa</p>
+                  <input 
+                    type="text"
+                    name="taxaInput"
+                    id="taxaInput"><br>
+                  <select id="taxaSelect">
+                    <option value = 1>Diária</option>
+                    <option value = 2>Mensal</option>
+                    <option value = 3>Anual</option>
+                  </select><br>
+                </div>
+
+                <div class="time">
+                  <p>Insira o período</p>
+                  <input 
+                    type="text"
+                    name="timeInput"
+                    id="timeInput"><br>
+                  <select id="timeSelect">
+                      <option value = 1>Diário</option>
+                      <option value = 2>Mensal</option>
+                      <option value = 3>Anual</option>
+                  </select><br>
+                </div>
+              </div>
+              
+              <button onclick="jurosSimples();">JS</button>
+              <button onclick="jurosCompostos();">JC</button>
+              <button onclick="valorPresente();">VP</button>
+              <button onclick="valorFuturo();">VF</button>
+              <button onclick="clearButton();module = 4">C</button>
+              <button onclick="apagarButton();module = 4">A</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        Resolve Tudo - 2024 - desenvolvido por <a href="https://github.com/vitukjkk">vitukjkkk</a>
+    </footer>
+</body>

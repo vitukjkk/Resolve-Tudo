@@ -1,0 +1,85 @@
+<head>
+    <meta charset="UTF-8">
+    <title>Resolve Tudo - Engenharia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="icon" href="../assets/images/logo_resolve tudo azul.png">
+    <script src="../script/buttons.js"></script>
+    <script src="../script/manage.js"></script>
+</head>
+<body>
+    <header>
+        <a href="../index.html">Resolve Tudo</a>
+        <nav>
+            <ul>
+            <a href="../modulos/geral.html">
+                <li>GERAL</li>
+            </a>
+            <a href="../modulos/matematica.html">
+                <li>MATEMÁTICA</li>
+            </a>
+            <a href="../modulos/cientifica.html">
+                <li>CIENTÍFICA</li>
+            </a>
+            <a href="../modulos/finance.html">
+                <li>FINANCEIRA</li>
+            </a>
+            <a href="../modulos/estatistica.html">
+                <li>ESTATÍSTICA</li>
+            </a>
+            <a href="../modulos/grafica.html">
+                <li>GRÁFICA</li>
+            </a>
+            <a href="../modulos/data.html">
+                <li>DATA</li>
+            </a>
+            <a href="../modulos/engenharia.html">
+                <li>ENGENHARIA</li>
+            </a>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Engenharia</h1>
+        <div class="home">
+            <div class="item">
+            <h3>Conversão de unidades</h3>
+            <p>transformação de unidades de medida</p>
+            </div>
+            <div class="item">
+            <h3>Conversão de grandezas</h3>
+            <p>transformação de grandezas físicas</p>
+            </div>
+            <div class="item">
+            <h3>Conversão de temperaturas</h3>
+            <p>transformação de temperaturas</p>
+            </div>
+            <div class="item">
+            <h3>Conversão de moedas</h3>
+            <p>transformação de moedas</p>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="divEngenharia">
+            <label for="engcalc">cálculos de engenharia bastante complexos</label><br>
+            <br>
+            <input
+                id="engcalc"
+                type="text"
+                oninput="module = 8"
+                placeholder="EM BREVE"> <br>
+            <button onclick="equalButton();module=8">=</button><br>
+            <button onclick="dotButton();module=8">.</button>
+            <button onclick="leftParButton();module=8">(</button>
+            <button onclick="rightParButton();module=8">)</button>
+            <button onclick="clearButton();module=8">C</button>
+            <button onclick="apagarButton();module=8">A</button>
+        </div>
+    </main>
+    <footer>
+        Resolve Tudo - 2024 - desenvolvido por <a href="https://github.com/vitukjkk">vitukjkkk</a>
+    </footer>
+</body>
