@@ -2,7 +2,10 @@
   "name": "resolve-tudo",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "build": "webpack",
+    "start": "webpack serve --open"
+  },
   "keywords": [],
   "author": "Vitor Colombelli",
   "license": "ISC",
@@ -13,6 +16,7 @@
     "style-loader": "^4.0.0",
     "ts-loader": "^9.5.1",
     "webpack": "^5.96.1",
-    "webpack-cli": "^5.1.4"
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.1.0"
   }
 }
