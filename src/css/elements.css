@@ -1,0 +1,40 @@
+/* BUTTONS */
+
+button {
+    padding: .5rem;
+    margin: 1rem;
+    border-radius: 1rem;
+
+    color: var(--color-secundaria);
+    background-color: var(--color-primaria);
+}
+
+label {
+    display: block;
+    font-size: 1.4rem;
+}
+
+textarea {
+    padding: .5rem;
+    margin: .5rem;
+    border-radius: .3rem;
+    text-align: center;
+    resize: none;
+    align-items: center;
+    align-content: center;
+
+    @media (max-width: 500px) {
+        width: 80%;
+        height: 6rem;
+    }
+
+    @media (min-width: 501px) and (max-width: 799px) {
+        width: 65%;
+        height: 8rem;
+    }
+
+    @media (min-width: 800px) {
+        width: 50%;
+        height: 10rem;
+    }
+}

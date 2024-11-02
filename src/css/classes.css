@@ -1,0 +1,57 @@
+/* GENERAL */
+
+.lightTheme {
+    color: var(--color-secundaria);
+    background-color: var(--color-primaria);
+}
+
+.darkTheme {
+    color: var(--color-primaria);
+    background-color: var(--color-secundaria);
+}
+
+/* =============================== */
+/* HEADER */
+/* =============================== */
+
+.spanHeaderRightIcons {
+    padding: .5rem;
+}
+
+/* =============================== */
+/* MAIN */
+/* =============================== */
+
+.spanMainShow {
+    display: inline-block;
+}
+
+.divMainModules {
+    color: var(--color-secundaria);
+    background-color: var(--color-primaria);
+}
+
+.divMainModulesOne {
+    padding: .5rem;
+}
+
+.divMainModulesContent {
+    display: none;
+    align-items: center;
+    border-bottom: 1px solid var(--color-terciaria);
+
+    @media (max-width: 500px) {
+        /* display: block; */
+    }
+
+    @media (min-width: 501px) and (max-width: 799px) {
+        /* display: grid; */
+        grid-template-columns: repeat(2, 50%);
+        justify-content: center;
+    }
+
+    @media (min-width: 800px) {
+        /* display: flex; */
+        justify-content: space-around;
+    }
+}

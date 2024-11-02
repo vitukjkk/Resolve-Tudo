@@ -1,0 +1,59 @@
+/* ========================== */
+/* HEADER */
+/* ========================== */
+
+/* DIVS */
+
+#divHeader {
+    align-items: center;
+    padding: .7rem;
+
+    @media (min-width: 1025px) {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+
+/* ========================= */
+/* MAIN */
+/* ========================= */
+
+/* DIVS */
+
+#divMainShowFirst {
+    align-items: center;
+
+    @media (min-width: 526px) {
+        display: grid;
+        grid-template-columns: repeat(2, 50%)
+    }
+}
+
+#divMainShowSecond {
+    align-items: center;
+
+    @media (min-width: 526px) {
+        display: grid;
+        grid-template-columns: repeat(2, 50%)
+    }
+}
+
+#divMainShowThird {
+    align-items: center;
+
+    @media (min-width: 526px) {
+        display: grid;
+        grid-template-columns: repeat(2, 50%)
+    }
+}
+
+/* P */
+
+#pMainIntroduction {
+    display: inline;
+    color: var(--color-secundaria);
+    background-color: var(--color-primaria);
+    padding: .3rem;
+    border-radius: .5rem;
+}

@@ -1,0 +1,29 @@
+* {
+    /* CORES */
+    --color-primaria: white;
+    --color-secundaria: black;
+    --color-terciaria: gray;
+
+    /* TIPOGRAFIA */
+    --font-primaria: 1rem/1.5 'Playfair Display', sans-serif;
+    --font-secundaria: 1rem/1.5 'Agdasima', sans-serif;   
+}
+
+body {
+
+	font: var(--font-primaria);
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+header {
+    color: var(--color-secundaria);
+    background-color: var(--color-primaria);
+}
+
+footer {
+    color: var(--color-secundaria);
+    background-color: var(--color-primaria);
+}
