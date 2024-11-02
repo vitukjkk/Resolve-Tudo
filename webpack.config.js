@@ -3,11 +3,14 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const PORT = 9000;
 
 module.exports = {
-    entry: "./src/ts/index.ts",
+    entry: {
+        index: './src/ts/index.ts',
+    },
     output: {
-        filename: "bundle.js",
+        filename: "[name].bundle.js",
         path: path.resolve(__dirname, "dist")
     },
+    mode: "development",
     resolve: {
         extensions: [".ts", ".js"]
     },
@@ -30,11 +33,6 @@ module.exports = {
             template: "./src/html/index.html",
             chunks: ["index"]
         }),
-        // new HtmlWebpackPlugin({
-        //     filename: "sobre.html",
-        //     template: "./src/html/sobre.html",
-        //     chunks: ["sobre"]
-        // })
     ],
     devServer: {
         static: {
