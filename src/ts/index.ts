@@ -1,4 +1,5 @@
 import '../css/index.css';
+import * as main from './main';
 
 // ============================
 // IMPORTANDO 
@@ -17,15 +18,28 @@ import '../assets/images/image_copilot.png';
 import '../assets/images/image_objective.png';
 import '../assets/images/image_tech.png';
 
-// FOOTER
-
+// MODULES
+import '../assets/icons/general/icon_arrow.png';
 
 // ELEMENTS
 
-import * as main from './main';
-
-// CORES
+const imgMainModulesExpand = document.querySelectorAll<HTMLElement>(".imgMainModulesExpand");
+var deg = 0;
 
 window.onload = () => {
-    main.changeTheme();    
+    main.changeTheme();   
+}
+
+// OCULTANDO / MOSTRANDO MÓDULOS
+
+for(const img in imgMainModulesExpand) {
+    imgMainModulesExpand[img].onclick = () => {
+        if(deg === 0) {
+            deg = 90;
+            imgMainModulesExpand[img].style.transform = `rotate(${deg}deg)`;
+        } else {
+            deg = 0;
+            imgMainModulesExpand[img].style.transform = `rotate(${deg}deg)`;
+        }
+    }
 }

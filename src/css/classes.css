@@ -47,6 +47,17 @@
     display: inline-block;
 }
 
+.divMainModulesExpansion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgMainModulesExpand {
+    width: 30px;
+    height: 35px;
+}
+
 .divMainModules {
     color: var(--color-secundaria);
     background-color: var(--color-primaria);
