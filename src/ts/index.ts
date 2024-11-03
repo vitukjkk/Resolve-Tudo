@@ -24,7 +24,10 @@ import '../assets/icons/general/icon_arrow.png';
 // ELEMENTS
 
 const imgMainModulesExpand = document.querySelectorAll<HTMLElement>(".imgMainModulesExpand");
-var deg = 0;
+const divMainModulesContent = document.querySelectorAll<HTMLElement>(".divMainModulesContent");
+const btnIndexFeedback = document.querySelector('#btnIndexFeedback') as HTMLElement;
+
+var degArrowModule = 0;
 
 window.onload = () => {
     main.changeTheme();   
@@ -34,12 +37,18 @@ window.onload = () => {
 
 for(const img in imgMainModulesExpand) {
     imgMainModulesExpand[img].onclick = () => {
-        if(deg === 0) {
-            deg = 90;
-            imgMainModulesExpand[img].style.transform = `rotate(${deg}deg)`;
+        if(degArrowModule === 0) {
+            degArrowModule = 90;
+            imgMainModulesExpand[img].style.transform = `rotate(${degArrowModule}deg)`;
+            divMainModulesContent[img].style.display = "block";
         } else {
-            deg = 0;
-            imgMainModulesExpand[img].style.transform = `rotate(${deg}deg)`;
+            degArrowModule = 0;
+            imgMainModulesExpand[img].style.transform = `rotate(${degArrowModule}deg)`;
+            divMainModulesContent[img].style.display = "none";
         }
     }
+}
+
+btnIndexFeedback.onclick = () => {
+    alert("ola mundo!");
 }
