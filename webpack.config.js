@@ -8,7 +8,7 @@ module.exports = {
     },
     output: {
         filename: "[name].bundle.js",
-        path: path.resolve(__dirname, "dist")
+        path: path.resolve(__dirname, "dist"),
     },
     mode: "development",
     resolve: {
@@ -45,7 +45,8 @@ module.exports = {
         static: {
             directory: path.join(__dirname, "dist"),
         },
+        hot: true,
         compress: true,
         port: PORT
-    }
-}
+    },
+};

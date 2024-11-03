@@ -1,3 +1,5 @@
+@import url(global.css);
+
 /* GENERAL */
 
 .lightTheme {
@@ -21,11 +23,25 @@
 .imgHeaderIcons {
     width: 50px;
     height: 50px;
+    @media (prefers-color-scheme: light) {
+        filter: invert();
+    }
+}
+
+.imgHeaderLogo {
+    max-width: 100%;
+    @media (prefers-color-scheme: dark) {
+        filter: invert();
+    }
 }
 
 /* =============================== */
 /* MAIN */
 /* =============================== */
+
+
+/* .imgMainShow {
+} */
 
 .spanMainShow {
     display: inline-block;

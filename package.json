@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "build": "webpack",
+    "build": "webpack serve --mode development",
     "start": "webpack serve --open"
   },
   "keywords": [],

@@ -156,7 +156,7 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
   \*************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _assets_icons_general_icon_main_ico__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../assets/icons/general/icon_main.ico */ \"./src/assets/icons/general/icon_main.ico\");\n/* harmony import */ var _assets_icons_general_icon_pages_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../assets/icons/general/icon_pages.png */ \"./src/assets/icons/general/icon_pages.png\");\n/* harmony import */ var _assets_logos_logo_Resolve_Tudo_sem_fundo_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../assets/logos/logo_Resolve_Tudo_sem_fundo.png */ \"./src/assets/logos/logo_Resolve_Tudo_sem_fundo.png\");\n/* harmony import */ var _assets_icons_general_icon_sobre_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../assets/icons/general/icon_sobre.png */ \"./src/assets/icons/general/icon_sobre.png\");\n/* harmony import */ var _css_index_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../css/index.css */ \"./src/css/index.css\");\n// IMPORTANDO IMAGENS\n\n\n\n\n\nwindow.onload = () => {\n};\n\n\n//# sourceURL=webpack://resolve-tudo/./src/ts/index.ts?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _css_index_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../css/index.css */ \"./src/css/index.css\");\n/* harmony import */ var _assets_icons_general_icon_main_ico__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../assets/icons/general/icon_main.ico */ \"./src/assets/icons/general/icon_main.ico\");\n/* harmony import */ var _assets_icons_general_icon_pages_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../assets/icons/general/icon_pages.png */ \"./src/assets/icons/general/icon_pages.png\");\n/* harmony import */ var _assets_logos_logo_Resolve_Tudo_sem_fundo_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../assets/logos/logo_Resolve_Tudo_sem_fundo.png */ \"./src/assets/logos/logo_Resolve_Tudo_sem_fundo.png\");\n/* harmony import */ var _assets_icons_general_icon_sobre_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../assets/icons/general/icon_sobre.png */ \"./src/assets/icons/general/icon_sobre.png\");\n/* harmony import */ var _assets_images_image_copilot_jpg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../assets/images/image_copilot.jpg */ \"./src/assets/images/image_copilot.jpg\");\n/* harmony import */ var _assets_images_image_objective_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../assets/images/image_objective.png */ \"./src/assets/images/image_objective.png\");\n/* harmony import */ var _assets_images_image_tech_png__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../assets/images/image_tech.png */ \"./src/assets/images/image_tech.png\");\n\n// ============================\n// IMPORTANDO \n// ============================\n// HEAD\n\n// HEADER\n\n\n\n// MAIN\n\n\n\nfunction showMainModule(module) {\n    console.log('ola mundo!');\n}\n\n\n//# sourceURL=webpack://resolve-tudo/./src/ts/index.ts?");
 
 /***/ }),
 
@@ -187,6 +187,36 @@ eval("module.exports = __webpack_require__.p + \"assets/images/icon_pages.png\";
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 eval("module.exports = __webpack_require__.p + \"assets/images/icon_sobre.png\";\n\n//# sourceURL=webpack://resolve-tudo/./src/assets/icons/general/icon_sobre.png?");
+
+/***/ }),
+
+/***/ "./src/assets/images/image_copilot.jpg":
+/*!*********************************************!*\
+  !*** ./src/assets/images/image_copilot.jpg ***!
+  \*********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"assets/images/image_copilot.jpg\";\n\n//# sourceURL=webpack://resolve-tudo/./src/assets/images/image_copilot.jpg?");
+
+/***/ }),
+
+/***/ "./src/assets/images/image_objective.png":
+/*!***********************************************!*\
+  !*** ./src/assets/images/image_objective.png ***!
+  \***********************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"assets/images/image_objective.png\";\n\n//# sourceURL=webpack://resolve-tudo/./src/assets/images/image_objective.png?");
+
+/***/ }),
+
+/***/ "./src/assets/images/image_tech.png":
+/*!******************************************!*\
+  !*** ./src/assets/images/image_tech.png ***!
+  \******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"assets/images/image_tech.png\";\n\n//# sourceURL=webpack://resolve-tudo/./src/assets/images/image_tech.png?");
 
 /***/ }),
 
