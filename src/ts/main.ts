@@ -4,7 +4,7 @@ import { cor_principal, cor_secundaria } from './config';
 const body = document.body;
 // DIVS
 const divHeader = document.querySelector('#divHeader');
-const divFooter = document.querySelector('#divFooter')
+const divFooter = document.querySelector('#divFooter');
 const divMainModules = document.querySelector('.divMainModules')
 const divMainModulesContent = document.querySelectorAll('.divMainModulesContent')
 // H

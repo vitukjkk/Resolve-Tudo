@@ -26,29 +26,41 @@ import '../assets/icons/general/icon_arrow.png';
 const imgMainModulesExpand = document.querySelectorAll<HTMLElement>(".imgMainModulesExpand");
 const divMainModulesContent = document.querySelectorAll<HTMLElement>(".divMainModulesContent");
 const btnIndexFeedback = document.querySelector('#btnIndexFeedback') as HTMLElement;
+const inputMainFeedback = document.querySelector('#inputMainFeedback') as HTMLInputElement;
 
 var degArrowModule = 0;
 
-window.onload = () => {
-    main.changeTheme();   
-}
-
-// OCULTANDO / MOSTRANDO MÓDULOS
-
-for(const img in imgMainModulesExpand) {
-    imgMainModulesExpand[img].onclick = () => {
-        if(degArrowModule === 0) {
-            degArrowModule = 90;
-            imgMainModulesExpand[img].style.transform = `rotate(${degArrowModule}deg)`;
-            divMainModulesContent[img].style.display = "block";
-        } else {
-            degArrowModule = 0;
-            imgMainModulesExpand[img].style.transform = `rotate(${degArrowModule}deg)`;
-            divMainModulesContent[img].style.display = "none";
-        }
-    }
-}
+const numberPhone = '61994030749'
 
 btnIndexFeedback.onclick = () => {
-    alert("ola mundo!");
+    const message = inputMainFeedback.value;
+    const url = `https://wa.me/${numberPhone}?text=Olá!%20deixo%20aqui%20meu%20feedback:%20${message}`;
+    window.open(url, '_blank');
+};
+
+function showAndHideModules() {
+    imgMainModulesExpand.forEach((img, index) => {
+        img.onclick = () => {
+            if (degArrowModule === 0) {
+                degArrowModule = 90;
+                img.style.transform = `rotate(${degArrowModule}deg)`;
+                if (divMainModulesContent[index]) {
+                    divMainModulesContent[index].style.display = "block";
+                }
+            } else {
+                degArrowModule = 0;
+                img.style.transform = `rotate(${degArrowModule}deg)`;
+                if (divMainModulesContent[index]) {
+                    divMainModulesContent[index].style.display = "none";
+                }
+            }
+        };
+    });
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    main.changeTheme(); 
+    
+    // OCULTANDO / MOSTRANDO MÓDULOS
+    showAndHideModules();
+});
