@@ -38,6 +38,11 @@ btnIndexFeedback.onclick = () => {
     window.open(url, '_blank');
 };
 
+function getDisplayContent(width : number) : string | any {
+    if(width <= 800) return 'block';
+    if(width > 800) return 'flex';
+}
+
 function showAndHideModules() {
     imgMainModulesExpand.forEach((img, index) => {
         img.onclick = () => {
@@ -45,7 +50,7 @@ function showAndHideModules() {
                 degArrowModule = 90;
                 img.style.transform = `rotate(${degArrowModule}deg)`;
                 if (divMainModulesContent[index]) {
-                    divMainModulesContent[index].style.display = "block";
+                    divMainModulesContent[index].style.display = getDisplayContent(window.innerWidth);
                 }
             } else {
                 degArrowModule = 0;
