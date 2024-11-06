@@ -2,6 +2,10 @@
 
 /* BUTTONS */
 
+ul {
+    list-style: none;
+}
+
 button {
     padding: .5rem;
     margin: 1rem;

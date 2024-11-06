@@ -1,5 +1,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const history = require('connect-history-api-fallback');
+const historyApiFallback = require("connect-history-api-fallback");
 const PORT = 9000;
 
 module.exports = {
@@ -47,6 +49,7 @@ module.exports = {
         },
         hot: true,
         compress: true,
-        port: PORT
+        port: PORT,
+        historyApiFallback: true,
     },
 };

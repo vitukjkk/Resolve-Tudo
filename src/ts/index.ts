@@ -12,6 +12,7 @@ import '../assets/icons/general/icon_main.ico';
 import '../assets/icons/general/icon_pages.png';
 import '../assets/logos/logo_Resolve_Tudo.png';
 import '../assets/icons/general/icon_sobre.png';
+import '../assets/icons/general/icon_config.png';
 
 // MAIN
 import '../assets/images/image_copilot.png';
@@ -32,16 +33,31 @@ import '../assets/icons/social/tik-tok pequeno.png';
 import '../assets/icons/social/youtube pequeno.png';
 import '../assets/icons/social/zap pequeno.png';
 
+// ========================
 // ELEMENTS
+// ========================
 
+// HEADER
+
+const imgHeaderIconPages = document.querySelector('#imgHeaderIconPages') as HTMLElement;
+
+// MAIN
 const imgMainModulesExpand = document.querySelectorAll<HTMLElement>(".imgMainModulesExpand");
 const divMainModulesContent = document.querySelectorAll<HTMLElement>(".divMainModulesContent");
 const btnIndexFeedback = document.querySelector('#btnIndexFeedback') as HTMLElement;
 const inputMainFeedback = document.querySelector('#inputMainFeedback') as HTMLInputElement;
 
+// ================================
+// VARIABLES
+// ================================
+
 var degArrowModule = 0;
 
 const numberPhone = '61994030749'
+
+// ===============================
+// TRIGGERS
+// ===============================
 
 btnIndexFeedback.onclick = () => {
     const message = inputMainFeedback.value;
@@ -49,9 +65,13 @@ btnIndexFeedback.onclick = () => {
     window.open(url, '_blank');
 };
 
-function getDisplayContent(width : number) : string | any {
+imgHeaderIconPages.onpointerup = () => {
+    alert("ola mundo!");
+}
+
+function getDisplayContent(width : number) : string {
     if(width <= 800) return 'block';
-    if(width > 800) return 'flex';
+    else return 'flex';
 }
 
 function showAndHideModules() {
