@@ -72,3 +72,12 @@
     padding: .5rem;
 }
 
+.divMainContactsContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.divMainOneContact {
+    padding: .2rem;
+    margin: .1rem 0;
+}

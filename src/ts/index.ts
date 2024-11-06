@@ -21,6 +21,17 @@ import '../assets/images/image_tech.png';
 // MODULES
 import '../assets/icons/general/icon_arrow.png';
 
+// CONTACTS
+
+import '../assets/icons/social/facebook pequeno.png';
+import '../assets/icons/social/github pequeno.png';
+import '../assets/icons/social/ig pequeno.png';
+import '../assets/icons/social/linkedin pequeno.png';
+import '../assets/icons/social/pinterest pequeno.png';
+import '../assets/icons/social/tik-tok pequeno.png';
+import '../assets/icons/social/youtube pequeno.png';
+import '../assets/icons/social/zap pequeno.png';
+
 // ELEMENTS
 
 const imgMainModulesExpand = document.querySelectorAll<HTMLElement>(".imgMainModulesExpand");

@@ -57,3 +57,9 @@
     padding: .3rem;
     border-radius: .5rem;
 }
+
+#imgMainContactGitHub {
+    @media (prefers-color-scheme: light) {
+        filter: invert();
+    }
+}
