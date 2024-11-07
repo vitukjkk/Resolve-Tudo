@@ -17,11 +17,12 @@
 #divHeaderLeftIcons {
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 #divHeaderPages {
-    /* display: none; */
     margin: .5rem;
+    display: none;
 
     a {
         display: block;

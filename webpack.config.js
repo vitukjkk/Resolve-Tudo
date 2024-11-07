@@ -1,12 +1,13 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const history = require('connect-history-api-fallback');
-const historyApiFallback = require("connect-history-api-fallback");
 const PORT = 9000;
 
 module.exports = {
     entry: {
         index: './src/ts/index.ts',
+        calcular: './src/ts/calcular.ts',
+        config: './src/ts/config.ts',
+        sobre: './src/ts/sobre.ts'
     },
     output: {
         filename: "[name].bundle.js",
@@ -41,6 +42,21 @@ module.exports = {
             filename: "index.html",
             template: "./src/html/index.html",
             chunks: ["index"]
+        }),
+        new HtmlWebpackPlugin({
+            filename: "calcular.html",
+            template: "./src/html/calcular.html",
+            chunks: ["calcular"]
+        }),
+        new HtmlWebpackPlugin({
+            filename: "config.html",
+            template: "./src/html/config.html",
+            chunks: ["config"]
+        }),
+        new HtmlWebpackPlugin({
+            filename: "sobre.html",
+            template: "./src/html/sobre.html",
+            chunks: ["sobre"]
         }),
     ],
     devServer: {

@@ -40,6 +40,8 @@ import '../assets/icons/social/zap pequeno.png';
 // HEADER
 
 const imgHeaderIconPages = document.querySelector('#imgHeaderIconPages') as HTMLElement;
+const aHeaderPages = document.querySelectorAll<HTMLElement>('.aHeaderPages');
+const divHeaderPages = document.querySelector('#divHeaderPages') as HTMLElement;
 
 // MAIN
 const imgMainModulesExpand = document.querySelectorAll<HTMLElement>(".imgMainModulesExpand");
@@ -52,7 +54,7 @@ const inputMainFeedback = document.querySelector('#inputMainFeedback') as HTMLIn
 // ================================
 
 var degArrowModule = 0;
-
+var pagesHeaderVisible = false;
 const numberPhone = '61994030749'
 
 // ===============================
@@ -66,8 +68,30 @@ btnIndexFeedback.onclick = () => {
 };
 
 imgHeaderIconPages.onpointerup = () => {
-    alert("ola mundo!");
+    if(pagesHeaderVisible) {
+        pagesHeaderVisible = false;
+        divHeaderPages.style.display = 'none';
+    } else {
+        pagesHeaderVisible = true;
+        divHeaderPages.style.display = 'block';
+    }
 }
+
+aHeaderPages.forEach((page, index) => {
+    page.onclick = () => {
+        switch(index) {
+            case 0: // CALCULAR
+                window.location.href = './calcular.html';
+                break;
+            case 1: // CONFIG
+                window.location.href = './config.html';
+                break;
+            case 2: // SOBRE
+                window.location.href = './sobre.html';
+                break;
+        }
+    }
+});
 
 function getDisplayContent(width : number) : string {
     if(width <= 800) return 'block';
