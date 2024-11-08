@@ -5,3 +5,4 @@ export {
     cor_principal,
     cor_secundaria
 }
+
