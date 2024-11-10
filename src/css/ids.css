@@ -93,3 +93,27 @@
 #divFooter {
     padding: .1rem;
 }
+
+/* ========================== */
+/* CONFIGURACOES */
+/* ============================ */
+
+#divConfiguracoes {
+    padding: .6rem;
+
+    @media (max-width: 550px) {
+        display: inline-block;
+        justify-content: center;
+        align-items: center;
+    }
+
+    @media (min-width: 551px) and (max-width: 924px) {
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+    }
+
+    @media (min-width: 925px) {
+        display: flex;
+        justify-content: space-between;
+    }
+}

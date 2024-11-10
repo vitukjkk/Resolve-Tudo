@@ -23,6 +23,13 @@ header {
     background-color: var(--color-primaria);
 }
 
+main {
+    padding: .4rem;
+
+    color: var(--color-primaria);
+    background-color: var(--color-secundaria);
+}
+
 footer {
     color: var(--color-secundaria);
     background-color: var(--color-primaria);

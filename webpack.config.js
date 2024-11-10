@@ -6,7 +6,7 @@ module.exports = {
     entry: {
         index: './src/ts/index.ts',
         calcular: './src/ts/calcular.ts',
-        config: './src/ts/config.ts',
+        configuracoes: './src/ts/configuracoes.ts',
         sobre: './src/ts/sobre.ts'
     },
     output: {
@@ -50,8 +50,8 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             filename: "config.html",
-            template: "./src/html/config.html",
-            chunks: ["config"]
+            template: "./src/html/configuracoes.html",
+            chunks: ["configuracoes"]
         }),
         new HtmlWebpackPlugin({
             filename: "sobre.html",
