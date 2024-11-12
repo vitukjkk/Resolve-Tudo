@@ -67,10 +67,12 @@
 .divMainModulesContent {
     display: none;
     align-items: center;
+    justify-content: center;
+    gap: .5rem;
 }
 
 .divMainModulesOne {
-    padding: .5rem;
+    padding: .5rem 2rem;
 }
 
 .divMainContactsContainer {

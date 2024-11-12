@@ -42,7 +42,8 @@ import '../assets/icons/social/zap pequeno.png';
 const imgHeaderIconPages = document.querySelector('#imgHeaderIconPages') as HTMLElement;
 const aHeaderPages = document.querySelectorAll<HTMLElement>('.aHeaderPages');
 const divHeaderPages = document.querySelector('#divHeaderPages') as HTMLElement;
-
+const imgHeaderIconConfig = document.querySelector('#imgHeaderIconConfig') as HTMLElement;
+const imgHeaderIconSobre = document.querySelector('#imgHeaderIconSobre') as HTMLElement;
 // MAIN
 const imgMainModulesExpand = document.querySelectorAll<HTMLElement>(".imgMainModulesExpand");
 const divMainModulesContent = document.querySelectorAll<HTMLElement>(".divMainModulesContent");
@@ -60,6 +61,14 @@ const numberPhone = '61994030749'
 // ===============================
 // TRIGGERS
 // ===============================
+
+imgHeaderIconConfig.onclick = () => {
+    window.location.href = './configuracoes.html';
+}
+
+imgHeaderIconSobre.onclick = () => {
+    window.location.href = './sobre.html';
+}
 
 btnIndexFeedback.onclick = () => {
     const message = inputMainFeedback.value;

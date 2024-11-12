@@ -8,10 +8,22 @@ const imgHeaderIconPages = document.querySelector('#imgHeaderIconPages') as HTML
 const aHeaderPages = document.querySelectorAll<HTMLElement>('.aHeaderPages');
 const divHeaderPages = document.querySelector('#divHeaderPages') as HTMLElement;
 
+const imgHeaderIconConfig = document.querySelector('#imgHeaderIconConfig') as HTMLElement;
+const imgHeaderIconSobre = document.querySelector('#imgHeaderIconSobre') as HTMLElement;
+
+
 var pagesHeaderVisible = false;
 
 imgHeaderLogo.onclick = () => {
     window.location.href = './index.html';
+}
+
+imgHeaderIconConfig.onclick = () => {
+    window.location.href = './configuracoes.html';
+}
+
+imgHeaderIconSobre.onclick = () => {
+    window.location.href = './sobre.html';
 }
 
 imgHeaderIconPages.onpointerup = () => {
