@@ -28,8 +28,8 @@
             </div>
             <img id='imgHeaderLogo' class="imgHeaderLogo" src="assets/images/logo_Resolve_Tudo.png" alt="Logotipo">
             <div id='divHeaderRightIcons'>		
-                <img class="imgHeaderIcons" src="assets/images/icon_sobre.png" alt="Sobre">
-                <img class="imgHeaderIcons" src="assets/images/icon_config.png" alt="Config">
+                <img id="imgHeaderIconSobre" class="imgHeaderIcons" src="assets/images/icon_sobre.png" alt="Sobre">
+                <img id="imgHeaderIconConfig" class="imgHeaderIcons" src="assets/images/icon_config.png" alt="Config">
             </div>
         </div>
     </header>
@@ -52,30 +52,112 @@
                     </span>
                     <input type="checkbox">
                 </div>
+
+                <div class="divMainConfigurationOne">
+                    <span>
+                        Tipo de notificação
+                    </span>
+                    <select name="selectConfigNotificationType" id="selectConfigNotificationType">
+                        <option value="email">Email</option>
+                        <option value="push">Push</option>
+                        <option value="sms">SMS</option>
+                    </select>
+                </div>
+
             </div>
 
             <div class="divMainConfiguration">
                 <h2>
                     Tema
                 </h2>
+
+                <div class="divMainConfigurationOne">
+                    <span>
+                    Tipo de tema
+                    </span>
+                    <select name="selectConfigThemeType" id="selectConfigThemeType">
+                        <option value="dark">Escuro</option>
+                        <option value="light">Claro</option>
+                        <option value="device">Seguir dispositivo</option>
+                        <option value="personal">Personalizado</option>
+                    </select>
+                </div>
+
+                <div class="divMainConfigurationOne">
+                    <span>
+                        Menu acessibilidade
+                    </span>
+                    <input type="checkbox">
+                </div>
             </div>
 
             <div class="divMainConfiguration">
                 <h2>
-                Privacidade
+                    Privacidade
                 </h2>
+
+                <div class="divMainConfigurationOne">
+                    <span>
+                        Perfil público
+                    </span>
+                    <input type="checkbox">
+                </div>
+
+                <div class="divMainConfigurationOne">
+                    <span>
+                        Informações públicas
+                    </span>
+                    <input type="checkbox">
+                </div>
+
+                <div class="divMainConfigurationOne">
+                    <span>
+                        Autenticação Multifatorial (2FA)
+                    </span>
+                    <input type="checkbox">
+                </div>
             </div>
 
             <div class="divMainConfiguration">
                 <h2>
-                Idioma
+                    Idioma
                 </h2>
+
+                <div class="divMainConfigurationOne">
+                    <span>
+                        Conteúdo do site
+                    </span>
+                    <select name="selectConfigSiteLanguage" id="selectConfigSiteLanguage">
+                        <option value="pt">Português</option>
+                        <option value="en">English</option>
+                    </select>
+                </div>
+
+                <div class="divMainConfigurationOne">
+                    <span>
+                        Comunicações
+                    </span>
+                    <select name="selectConfigCommsLanguage" id="selectConfigCommsLanguage">
+                        <option value="pt">Português</option>
+                        <option value="en">English</option>
+                    </select>
+                </div>
             </div>
 
             <div class="divMainConfiguration">
                 <h2>
-                Perfil
+                    Perfil
                 </h2>
+
+                <span class="configUsersTopics">User Name</span>
+                <img class="configUsersTopics" src="" alt="foto do usuário">
+                <!-- 
+                NAME
+                PHOTO
+                USER
+                EMAIL
+                BIO
+                LINKS -->
             </div>
         </div>
     </main>

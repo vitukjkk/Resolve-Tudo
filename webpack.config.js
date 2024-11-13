@@ -49,7 +49,7 @@ module.exports = {
             chunks: ["calcular"]
         }),
         new HtmlWebpackPlugin({
-            filename: "config.html",
+            filename: "configuracoes.html",
             template: "./src/html/configuracoes.html",
             chunks: ["configuracoes"]
         }),

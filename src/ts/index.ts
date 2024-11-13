@@ -93,7 +93,7 @@ aHeaderPages.forEach((page, index) => {
                 window.location.href = './calcular.html';
                 break;
             case 1: // CONFIG
-                window.location.href = './config.html';
+                window.location.href = './configuracoes.html';
                 break;
             case 2: // SOBRE
                 window.location.href = './sobre.html';
