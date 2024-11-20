@@ -117,3 +117,17 @@
         justify-content: space-between;
     }
 }
+
+/* CALCULAR */
+
+#calcularSelect {
+    font: var(--font-primaria);
+    font-weight: bold;
+
+    padding: .5rem;
+    margin: .5rem;
+
+    border: 1px solid var(--color-terciaria);
+    border-radius: .3rem;
+    text-align: center;
+}

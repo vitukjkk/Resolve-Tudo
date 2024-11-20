@@ -2,6 +2,7 @@ import '../css/index.css';
 
 // ELEMENTOS
 
+// HEADER
 const imgHeaderLogo = document.querySelector('#imgHeaderLogo') as HTMLElement;
 
 const imgHeaderIconPages = document.querySelector('#imgHeaderIconPages') as HTMLElement;
@@ -11,6 +12,9 @@ const divHeaderPages = document.querySelector('#divHeaderPages') as HTMLElement;
 const imgHeaderIconConfig = document.querySelector('#imgHeaderIconConfig') as HTMLElement;
 const imgHeaderIconSobre = document.querySelector('#imgHeaderIconSobre') as HTMLElement;
 
+// MAIN
+
+const calcularSelect = document.querySelector('#calcularSelect') as HTMLSelectElement;
 
 var pagesHeaderVisible = false;
 
@@ -51,3 +55,32 @@ aHeaderPages.forEach((page, index) => {
         }
     }
 });
+
+calcularSelect.onchange = () => {
+    switch(calcularSelect.value) {
+        case 'basica':
+            console.log('basica');
+            break;
+        case 'matematica':
+            console.log('matematica');
+            break;
+        case 'cientifica':
+            console.log('cientifica');
+            break;
+        case 'financeira':
+            console.log('financeira');
+            break;
+        case 'grafica':
+            console.log('grafica');
+            break;
+        case 'estatistica':
+            console.log('estatistica');
+            break;
+        case 'data':
+            console.log('data');
+            break;
+        case 'engenharia':
+            console.log('engenharia');
+            break;
+    }
+}

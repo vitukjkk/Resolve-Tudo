@@ -33,6 +33,10 @@ import '../assets/icons/social/tik-tok pequeno.png';
 import '../assets/icons/social/youtube pequeno.png';
 import '../assets/icons/social/zap pequeno.png';
 
+// CONFIGURAÇÕES
+
+import '../assets/icons/general/icon_user.png';
+
 // ========================
 // ELEMENTS
 // ========================
