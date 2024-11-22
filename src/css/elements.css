@@ -60,3 +60,27 @@ textarea {
         height: 10rem;
     }
 }
+
+/* CALCULAR */
+
+input[type="text"] {
+    font: var(--font-primaria);
+    padding: .5rem;
+    margin: .5rem;
+    border-radius: .3rem;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+
+    @media (max-width: 500px) {
+        width: 80%;
+    }
+
+    @media (min-width: 501px) and (max-width: 799px) {
+        width: 65%;
+    }
+
+    @media (min-width: 800px) {
+        width: 50%;
+    }
+}
