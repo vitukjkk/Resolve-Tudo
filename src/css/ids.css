@@ -133,5 +133,10 @@
 }
 
 #inputMathSecond {
-    width: 15%;	
+    font: var(--font-primaria);
+    padding: .5rem;
+    margin: .5rem;
+    border-radius: .3rem;
+    text-align: center;
+    width: 15%;
 }

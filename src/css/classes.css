@@ -132,3 +132,33 @@
 .divMainCalcular {
     display: none;
 }
+
+.inputMainValue {
+    font: var(--font-primaria);
+    padding: .5rem;
+    margin: .5rem;
+    border-radius: .3rem;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    width: 80%;
+}
+
+.inputSecondValue {
+    font: var(--font-primaria);
+    padding: .5rem;
+    margin: .5rem;
+    border-radius: .3rem;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    width: 15%;	
+}
+
+.spanSecondInput {
+    display: block;
+}
+
+.divMainCalcularFinance {
+    display: flex;
+}
