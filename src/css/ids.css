@@ -131,3 +131,7 @@
     border-radius: .3rem;
     text-align: center;
 }
+
+#inputMathSecond {
+    width: 15%;	
+}

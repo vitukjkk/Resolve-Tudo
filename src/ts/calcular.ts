@@ -25,6 +25,7 @@ const fundamentalButtons = document.querySelectorAll<HTMLElement>('.fundamentalB
 
 const inputCalcularMain = document.querySelector('#inputCalcularMain') as HTMLInputElement;
 const divMainCalcular = document.querySelectorAll<HTMLElement>('.divMainCalcular');
+const inputMathSecond = document.querySelector('#inputMathSecond') as HTMLInputElement;
 
 // VARIABLES
 
@@ -121,10 +122,17 @@ basicaButtons.forEach((button, index) => {
 mathButtons.forEach((button, index) => {
     button.onclick = () => {
         var number = Number(inputCalcularMain.value);   
+        var fator = Number(inputMathSecond.value);
         switch(index) {
             case 0: // RAIZ
                 inputCalcularMain.value = Math.sqrt(number).toString();
                 break;
+            case 1: // EXPONENCIAÇÃO
+                inputCalcularMain.value = Math.pow(number, fator).toString();
+                break;     
+            case 2: // PORCENTAGEM
+            case 3: // MÓDULO
+            case 4: // FATORIAL
         }
     }
 });
