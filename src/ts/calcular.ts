@@ -79,6 +79,10 @@ inputCalcularMain.oninput = () => {
     inputCalcularMain.value = inputCalcularMain.value.replace(/[^0-9\+\-\*\/\(\)\.]/g, '');
 }
 
+inputMathSecond.oninput = () => {
+    inputMathSecond.value = inputMathSecond.value.replace(/[^0-9\.]/g, '');
+}
+
 inputCalcularMain.onkeydown = (event) => {
     if(event.key === 'Enter') {
         calcularModulo(0);
@@ -131,9 +135,22 @@ mathButtons.forEach((button, index) => {
                 inputCalcularMain.value = Math.pow(number, fator).toString();
                 break;     
             case 2: // PORCENTAGEM
+                inputCalcularMain.value = (number * fator / 100).toString();    
+            break;
             case 3: // MÓDULO
+                inputCalcularMain.value = (number % fator).toString();
+                break;
             case 4: // FATORIAL
+                var result = 1;
+
+                for(number; number > 1; number--) {
+                    result *= number;
+                }
+
+                inputCalcularMain.value = result.toString();
+                break;
         }
+        inputCalcularMain.focus();
     }
 });
 
@@ -187,6 +204,7 @@ fundamentalButtons.forEach((button, index) => {
                 break;
             case 1: // BOTÃO LIMPAR
                 inputCalcularMain.value = "";
+                inputMathSecond.value = "";
                 break;
             case 2:
                 calcularModulo(0);
