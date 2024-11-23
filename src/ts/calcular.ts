@@ -137,7 +137,7 @@ calcularSelect.onchange = () => {
             control.lastModuleShow = 5;
             break;
         case 'engenharia':
-            divMainCalcular[7].style.display = 'block';
+            divMainCalcular[6].style.display = 'block';
             control.lastModuleShow = 7;
             break;
     }
