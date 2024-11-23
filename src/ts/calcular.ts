@@ -3,7 +3,8 @@ import '../css/index.css';
 // BIBLIOTECAS
 
 import { control } from './config';
-const ss = require('simple-statistics');
+const ss = require('simple-statistics'); // ESTATÍSTICA
+const day = require('dayjs'); // DATA
 
 // ELEMENTOS
 
@@ -92,8 +93,6 @@ aHeaderPages.forEach((page, index) => {
 
 inputCalcularMain.min = '0';
 
-
-
 inputs.forEach((input) => {
     input.oninput = () => {
         input.value = input.value.replace(/[^0-9\+\-\*\/\(\)\.]/g, '');
@@ -136,10 +135,6 @@ calcularSelect.onchange = () => {
         case 'estatistica':
             divMainCalcular[5].style.display = 'block';
             control.lastModuleShow = 5;
-            break;
-        case 'data':
-            divMainCalcular[6].style.display = 'block';
-            control.lastModuleShow = 6;
             break;
         case 'engenharia':
             divMainCalcular[7].style.display = 'block';
