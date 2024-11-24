@@ -150,213 +150,13 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
 
 /***/ }),
 
-/***/ "./src/ts/config.ts":
-/*!**************************!*\
-  !*** ./src/ts/config.ts ***!
-  \**************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   control: () => (/* binding */ control),\n/* harmony export */   cor_principal: () => (/* binding */ cor_principal),\n/* harmony export */   cor_secundaria: () => (/* binding */ cor_secundaria)\n/* harmony export */ });\nconst cor_principal = 'white';\nconst cor_secundaria = 'black';\nvar control = {\n    lastModuleShow: 0\n};\n\n\n\n//# sourceURL=webpack://resolve-tudo/./src/ts/config.ts?");
-
-/***/ }),
-
-/***/ "./src/ts/index.ts":
+/***/ "./src/ts/sobre.ts":
 /*!*************************!*\
-  !*** ./src/ts/index.ts ***!
+  !*** ./src/ts/sobre.ts ***!
   \*************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _css_index_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../css/index.css */ \"./src/css/index.css\");\n/* harmony import */ var _main__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./main */ \"./src/ts/main.ts\");\n/* harmony import */ var _assets_icons_general_icon_main_ico__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../assets/icons/general/icon_main.ico */ \"./src/assets/icons/general/icon_main.ico\");\n/* harmony import */ var _assets_icons_general_icon_pages_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../assets/icons/general/icon_pages.png */ \"./src/assets/icons/general/icon_pages.png\");\n/* harmony import */ var _assets_logos_logo_Resolve_Tudo_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../assets/logos/logo_Resolve_Tudo.png */ \"./src/assets/logos/logo_Resolve_Tudo.png\");\n/* harmony import */ var _assets_icons_general_icon_sobre_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../assets/icons/general/icon_sobre.png */ \"./src/assets/icons/general/icon_sobre.png\");\n/* harmony import */ var _assets_icons_general_icon_config_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../assets/icons/general/icon_config.png */ \"./src/assets/icons/general/icon_config.png\");\n/* harmony import */ var _assets_images_image_copilot_png__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../assets/images/image_copilot.png */ \"./src/assets/images/image_copilot.png\");\n/* harmony import */ var _assets_images_image_objective_png__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../assets/images/image_objective.png */ \"./src/assets/images/image_objective.png\");\n/* harmony import */ var _assets_images_image_tech_png__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../assets/images/image_tech.png */ \"./src/assets/images/image_tech.png\");\n/* harmony import */ var _assets_icons_general_icon_arrow_png__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../assets/icons/general/icon_arrow.png */ \"./src/assets/icons/general/icon_arrow.png\");\n/* harmony import */ var _assets_icons_social_facebook_pequeno_png__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../assets/icons/social/facebook pequeno.png */ \"./src/assets/icons/social/facebook pequeno.png\");\n/* harmony import */ var _assets_icons_social_github_pequeno_png__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../assets/icons/social/github pequeno.png */ \"./src/assets/icons/social/github pequeno.png\");\n/* harmony import */ var _assets_icons_social_ig_pequeno_png__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../assets/icons/social/ig pequeno.png */ \"./src/assets/icons/social/ig pequeno.png\");\n/* harmony import */ var _assets_icons_social_linkedin_pequeno_png__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../assets/icons/social/linkedin pequeno.png */ \"./src/assets/icons/social/linkedin pequeno.png\");\n/* harmony import */ var _assets_icons_social_pinterest_pequeno_png__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../assets/icons/social/pinterest pequeno.png */ \"./src/assets/icons/social/pinterest pequeno.png\");\n/* harmony import */ var _assets_icons_social_tik_tok_pequeno_png__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../assets/icons/social/tik-tok pequeno.png */ \"./src/assets/icons/social/tik-tok pequeno.png\");\n/* harmony import */ var _assets_icons_social_youtube_pequeno_png__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../assets/icons/social/youtube pequeno.png */ \"./src/assets/icons/social/youtube pequeno.png\");\n/* harmony import */ var _assets_icons_social_zap_pequeno_png__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../assets/icons/social/zap pequeno.png */ \"./src/assets/icons/social/zap pequeno.png\");\n/* harmony import */ var _assets_icons_general_icon_user_png__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ../assets/icons/general/icon_user.png */ \"./src/assets/icons/general/icon_user.png\");\n\n\n// ============================\n// IMPORTANDO \n// ============================\n// HEAD\n\n// HEADER\n\n\n\n\n// MAIN\n\n\n\n// MODULES\n\n// CONTACTS\n\n\n\n\n\n\n\n\n// CONFIGURAÇÕES\n\n// ========================\n// ELEMENTS\n// ========================\n// HEADER\nconst imgHeaderIconPages = document.querySelector('#imgHeaderIconPages');\nconst aHeaderPages = document.querySelectorAll('.aHeaderPages');\nconst divHeaderPages = document.querySelector('#divHeaderPages');\nconst imgHeaderIconConfig = document.querySelector('#imgHeaderIconConfig');\nconst imgHeaderIconSobre = document.querySelector('#imgHeaderIconSobre');\n// MAIN\nconst imgMainModulesExpand = document.querySelectorAll(\".imgMainModulesExpand\");\nconst divMainModulesContent = document.querySelectorAll(\".divMainModulesContent\");\nconst btnIndexFeedback = document.querySelector('#btnIndexFeedback');\nconst inputMainFeedback = document.querySelector('#inputMainFeedback');\n// ================================\n// VARIABLES\n// ================================\nvar degArrowModule = 0;\nvar pagesHeaderVisible = false;\nconst numberPhone = '61994030749';\n// ===============================\n// TRIGGERS\n// ===============================\nimgHeaderIconConfig.onclick = () => {\n    window.location.href = './configuracoes.html';\n};\nimgHeaderIconSobre.onclick = () => {\n    window.location.href = './sobre.html';\n};\nbtnIndexFeedback.onclick = () => {\n    const message = inputMainFeedback.value;\n    const url = `https://wa.me/${numberPhone}?text=Olá!%20deixo%20aqui%20meu%20feedback:%20${message}`;\n    window.open(url, '_blank');\n};\nimgHeaderIconPages.onpointerup = () => {\n    if (pagesHeaderVisible) {\n        pagesHeaderVisible = false;\n        divHeaderPages.style.display = 'none';\n    }\n    else {\n        pagesHeaderVisible = true;\n        divHeaderPages.style.display = 'block';\n    }\n};\naHeaderPages.forEach((page, index) => {\n    page.onclick = () => {\n        switch (index) {\n            case 0: // CALCULAR\n                window.location.href = './calcular.html';\n                break;\n            case 1: // CONFIG\n                window.location.href = './configuracoes.html';\n                break;\n            case 2: // SOBRE\n                window.location.href = './sobre.html';\n                break;\n        }\n    };\n});\nfunction getDisplayContent(width) {\n    if (width <= 800)\n        return 'block';\n    else\n        return 'flex';\n}\nfunction showAndHideModules() {\n    imgMainModulesExpand.forEach((img, index) => {\n        img.onclick = () => {\n            if (degArrowModule === 0) {\n                degArrowModule = 90;\n                img.style.transform = `rotate(${degArrowModule}deg)`;\n                if (divMainModulesContent[index]) {\n                    divMainModulesContent[index].style.display = getDisplayContent(window.innerWidth);\n                }\n            }\n            else {\n                degArrowModule = 0;\n                img.style.transform = `rotate(${degArrowModule}deg)`;\n                if (divMainModulesContent[index]) {\n                    divMainModulesContent[index].style.display = \"none\";\n                }\n            }\n        };\n    });\n}\ndocument.addEventListener('DOMContentLoaded', () => {\n    _main__WEBPACK_IMPORTED_MODULE_1__.changeTheme();\n    // OCULTANDO / MOSTRANDO MÓDULOS\n    showAndHideModules();\n});\n\n\n//# sourceURL=webpack://resolve-tudo/./src/ts/index.ts?");
-
-/***/ }),
-
-/***/ "./src/ts/main.ts":
-/*!************************!*\
-  !*** ./src/ts/main.ts ***!
-  \************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   changeColorDark: () => (/* binding */ changeColorDark),\n/* harmony export */   changeColorLight: () => (/* binding */ changeColorLight),\n/* harmony export */   changeTheme: () => (/* binding */ changeTheme)\n/* harmony export */ });\n/* harmony import */ var _config__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./config */ \"./src/ts/config.ts\");\n\n// DEFININDO ELEMENTOS\nconst body = document.body;\n// DIVS\nconst divHeader = document.querySelector('#divHeader');\nconst divFooter = document.querySelector('#divFooter');\nconst divMainModules = document.querySelector('.divMainModules');\nconst divMainModulesContent = document.querySelectorAll('.divMainModulesContent');\n// H\n// const h2MainModules = document.querySelectorAll('.h2MainModules')\n// A\nconst aFooterLinkGithub = document.querySelector('#aFooterLinkGithub');\n// P\nconst pMainIntroduction = document.querySelector('#pMainIntroduction');\nfunction changeTheme() {\n    window.matchMedia('(prefers-color-scheme: dark)').matches ? changeColorDark() : changeColorLight();\n}\nfunction changeColorDark() {\n    body.classList.add('darkTheme');\n    // DIVS\n    divHeader === null || divHeader === void 0 ? void 0 : divHeader.classList.add('lightTheme');\n    divFooter === null || divFooter === void 0 ? void 0 : divFooter.classList.add('lightTheme');\n    if (aFooterLinkGithub)\n        aFooterLinkGithub.style.color = _config__WEBPACK_IMPORTED_MODULE_0__.cor_secundaria;\n}\nfunction changeColorLight() {\n    body.classList.add('lightTheme');\n    // DIVS\n    divHeader === null || divHeader === void 0 ? void 0 : divHeader.classList.add('darkTheme');\n    divFooter === null || divFooter === void 0 ? void 0 : divFooter.classList.add('darkTheme');\n    divMainModules === null || divMainModules === void 0 ? void 0 : divMainModules.classList.add('darkTheme');\n    // A\n    aFooterLinkGithub.style.color = _config__WEBPACK_IMPORTED_MODULE_0__.cor_principal;\n    pMainIntroduction.style.color = _config__WEBPACK_IMPORTED_MODULE_0__.cor_principal;\n    pMainIntroduction.style.backgroundColor = _config__WEBPACK_IMPORTED_MODULE_0__.cor_secundaria;\n}\n\n\n\n//# sourceURL=webpack://resolve-tudo/./src/ts/main.ts?");
-
-/***/ }),
-
-/***/ "./src/assets/icons/general/icon_arrow.png":
-/*!*************************************************!*\
-  !*** ./src/assets/icons/general/icon_arrow.png ***!
-  \*************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-eval("module.exports = __webpack_require__.p + \"assets/images/icon_arrow.png\";\n\n//# sourceURL=webpack://resolve-tudo/./src/assets/icons/general/icon_arrow.png?");
-
-/***/ }),
-
-/***/ "./src/assets/icons/general/icon_config.png":
-/*!**************************************************!*\
-  !*** ./src/assets/icons/general/icon_config.png ***!
-  \**************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-eval("module.exports = __webpack_require__.p + \"assets/images/icon_config.png\";\n\n//# sourceURL=webpack://resolve-tudo/./src/assets/icons/general/icon_config.png?");
-
-/***/ }),
-
-/***/ "./src/assets/icons/general/icon_main.ico":
-/*!************************************************!*\
-  !*** ./src/assets/icons/general/icon_main.ico ***!
-  \************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-eval("module.exports = __webpack_require__.p + \"assets/images/icon_main.ico\";\n\n//# sourceURL=webpack://resolve-tudo/./src/assets/icons/general/icon_main.ico?");
-
-/***/ }),
-
-/***/ "./src/assets/icons/general/icon_pages.png":
-/*!*************************************************!*\
-  !*** ./src/assets/icons/general/icon_pages.png ***!
-  \*************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-eval("module.exports = __webpack_require__.p + \"assets/images/icon_pages.png\";\n\n//# sourceURL=webpack://resolve-tudo/./src/assets/icons/general/icon_pages.png?");
-
-/***/ }),
-
-/***/ "./src/assets/icons/general/icon_sobre.png":
-/*!*************************************************!*\
-  !*** ./src/assets/icons/general/icon_sobre.png ***!
-  \*************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-eval("module.exports = __webpack_require__.p + \"assets/images/icon_sobre.png\";\n\n//# sourceURL=webpack://resolve-tudo/./src/assets/icons/general/icon_sobre.png?");
-
-/***/ }),
-
-/***/ "./src/assets/icons/general/icon_user.png":
-/*!************************************************!*\
-  !*** ./src/assets/icons/general/icon_user.png ***!
-  \************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-eval("module.exports = __webpack_require__.p + \"assets/images/icon_user.png\";\n\n//# sourceURL=webpack://resolve-tudo/./src/assets/icons/general/icon_user.png?");
-
-/***/ }),
-
-/***/ "./src/assets/icons/social/facebook pequeno.png":
-/*!******************************************************!*\
-  !*** ./src/assets/icons/social/facebook pequeno.png ***!
-  \******************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-eval("module.exports = __webpack_require__.p + \"assets/images/facebook pequeno.png\";\n\n//# sourceURL=webpack://resolve-tudo/./src/assets/icons/social/facebook_pequeno.png?");
-
-/***/ }),
-
-/***/ "./src/assets/icons/social/github pequeno.png":
-/*!****************************************************!*\
-  !*** ./src/assets/icons/social/github pequeno.png ***!
-  \****************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-eval("module.exports = __webpack_require__.p + \"assets/images/github pequeno.png\";\n\n//# sourceURL=webpack://resolve-tudo/./src/assets/icons/social/github_pequeno.png?");
-
-/***/ }),
-
-/***/ "./src/assets/icons/social/ig pequeno.png":
-/*!************************************************!*\
-  !*** ./src/assets/icons/social/ig pequeno.png ***!
-  \************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-eval("module.exports = __webpack_require__.p + \"assets/images/ig pequeno.png\";\n\n//# sourceURL=webpack://resolve-tudo/./src/assets/icons/social/ig_pequeno.png?");
-
-/***/ }),
-
-/***/ "./src/assets/icons/social/linkedin pequeno.png":
-/*!******************************************************!*\
-  !*** ./src/assets/icons/social/linkedin pequeno.png ***!
-  \******************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-eval("module.exports = __webpack_require__.p + \"assets/images/linkedin pequeno.png\";\n\n//# sourceURL=webpack://resolve-tudo/./src/assets/icons/social/linkedin_pequeno.png?");
-
-/***/ }),
-
-/***/ "./src/assets/icons/social/pinterest pequeno.png":
-/*!*******************************************************!*\
-  !*** ./src/assets/icons/social/pinterest pequeno.png ***!
-  \*******************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-eval("module.exports = __webpack_require__.p + \"assets/images/pinterest pequeno.png\";\n\n//# sourceURL=webpack://resolve-tudo/./src/assets/icons/social/pinterest_pequeno.png?");
-
-/***/ }),
-
-/***/ "./src/assets/icons/social/tik-tok pequeno.png":
-/*!*****************************************************!*\
-  !*** ./src/assets/icons/social/tik-tok pequeno.png ***!
-  \*****************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-eval("module.exports = __webpack_require__.p + \"assets/images/tik-tok pequeno.png\";\n\n//# sourceURL=webpack://resolve-tudo/./src/assets/icons/social/tik-tok_pequeno.png?");
-
-/***/ }),
-
-/***/ "./src/assets/icons/social/youtube pequeno.png":
-/*!*****************************************************!*\
-  !*** ./src/assets/icons/social/youtube pequeno.png ***!
-  \*****************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-eval("module.exports = __webpack_require__.p + \"assets/images/youtube pequeno.png\";\n\n//# sourceURL=webpack://resolve-tudo/./src/assets/icons/social/youtube_pequeno.png?");
-
-/***/ }),
-
-/***/ "./src/assets/icons/social/zap pequeno.png":
-/*!*************************************************!*\
-  !*** ./src/assets/icons/social/zap pequeno.png ***!
-  \*************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-eval("module.exports = __webpack_require__.p + \"assets/images/zap pequeno.png\";\n\n//# sourceURL=webpack://resolve-tudo/./src/assets/icons/social/zap_pequeno.png?");
-
-/***/ }),
-
-/***/ "./src/assets/images/image_copilot.png":
-/*!*********************************************!*\
-  !*** ./src/assets/images/image_copilot.png ***!
-  \*********************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-eval("module.exports = __webpack_require__.p + \"assets/images/image_copilot.png\";\n\n//# sourceURL=webpack://resolve-tudo/./src/assets/images/image_copilot.png?");
-
-/***/ }),
-
-/***/ "./src/assets/images/image_objective.png":
-/*!***********************************************!*\
-  !*** ./src/assets/images/image_objective.png ***!
-  \***********************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-eval("module.exports = __webpack_require__.p + \"assets/images/image_objective.png\";\n\n//# sourceURL=webpack://resolve-tudo/./src/assets/images/image_objective.png?");
-
-/***/ }),
-
-/***/ "./src/assets/images/image_tech.png":
-/*!******************************************!*\
-  !*** ./src/assets/images/image_tech.png ***!
-  \******************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-eval("module.exports = __webpack_require__.p + \"assets/images/image_tech.png\";\n\n//# sourceURL=webpack://resolve-tudo/./src/assets/images/image_tech.png?");
-
-/***/ }),
-
-/***/ "./src/assets/logos/logo_Resolve_Tudo.png":
-/*!************************************************!*\
-  !*** ./src/assets/logos/logo_Resolve_Tudo.png ***!
-  \************************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-eval("module.exports = __webpack_require__.p + \"assets/images/logo_Resolve_Tudo.png\";\n\n//# sourceURL=webpack://resolve-tudo/./src/assets/logos/logo_Resolve_Tudo.png?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _css_index_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../css/index.css */ \"./src/css/index.css\");\n\n// ELEMENTOS\nconst imgHeaderLogo = document.querySelector('#imgHeaderLogo');\nconst imgHeaderIconPages = document.querySelector('#imgHeaderIconPages');\nconst aHeaderPages = document.querySelectorAll('.aHeaderPages');\nconst divHeaderPages = document.querySelector('#divHeaderPages');\nconst imgHeaderIconConfig = document.querySelector('#imgHeaderIconConfig');\nconst imgHeaderIconSobre = document.querySelector('#imgHeaderIconSobre');\nvar pagesHeaderVisible = false;\nimgHeaderIconConfig.onclick = () => {\n    window.location.href = './configuracoes.html';\n};\nimgHeaderIconSobre.onclick = () => {\n    window.location.href = './sobre.html';\n};\nimgHeaderLogo.onclick = () => {\n    window.location.href = './index.html';\n};\nimgHeaderIconPages.onpointerup = () => {\n    if (pagesHeaderVisible) {\n        pagesHeaderVisible = false;\n        divHeaderPages.style.display = 'none';\n    }\n    else {\n        pagesHeaderVisible = true;\n        divHeaderPages.style.display = 'block';\n    }\n};\naHeaderPages.forEach((page, index) => {\n    page.onclick = () => {\n        switch (index) {\n            case 0: // CALCULAR\n                window.location.href = './calcular.html';\n                break;\n            case 1: // CONFIG\n                window.location.href = './configuracoes.html';\n                break;\n            case 2: // SOBRE\n                window.location.href = './sobre.html';\n                break;\n        }\n    };\n});\n\n\n//# sourceURL=webpack://resolve-tudo/./src/ts/sobre.ts?");
 
 /***/ })
 
@@ -411,18 +211,6 @@ eval("module.exports = __webpack_require__.p + \"assets/images/logo_Resolve_Tudo
 /******/ 		};
 /******/ 	})();
 /******/ 	
-/******/ 	/* webpack/runtime/global */
-/******/ 	(() => {
-/******/ 		__webpack_require__.g = (function() {
-/******/ 			if (typeof globalThis === 'object') return globalThis;
-/******/ 			try {
-/******/ 				return this || new Function('return this')();
-/******/ 			} catch (e) {
-/******/ 				if (typeof window === 'object') return window;
-/******/ 			}
-/******/ 		})();
-/******/ 	})();
-/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -439,29 +227,6 @@ eval("module.exports = __webpack_require__.p + \"assets/images/logo_Resolve_Tudo
 /******/ 		};
 /******/ 	})();
 /******/ 	
-/******/ 	/* webpack/runtime/publicPath */
-/******/ 	(() => {
-/******/ 		var scriptUrl;
-/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
-/******/ 		var document = __webpack_require__.g.document;
-/******/ 		if (!scriptUrl && document) {
-/******/ 			if (document.currentScript && document.currentScript.tagName.toUpperCase() === 'SCRIPT')
-/******/ 				scriptUrl = document.currentScript.src;
-/******/ 			if (!scriptUrl) {
-/******/ 				var scripts = document.getElementsByTagName("script");
-/******/ 				if(scripts.length) {
-/******/ 					var i = scripts.length - 1;
-/******/ 					while (i > -1 && (!scriptUrl || !/^http(s?):/.test(scriptUrl))) scriptUrl = scripts[i--].src;
-/******/ 				}
-/******/ 			}
-/******/ 		}
-/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
-/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
-/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
-/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
-/******/ 		__webpack_require__.p = scriptUrl;
-/******/ 	})();
-/******/ 	
 /******/ 	/* webpack/runtime/nonce */
 /******/ 	(() => {
 /******/ 		__webpack_require__.nc = undefined;
@@ -472,7 +237,7 @@ eval("module.exports = __webpack_require__.p + \"assets/images/logo_Resolve_Tudo
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module can't be inlined because the eval devtool is used.
-/******/ 	var __webpack_exports__ = __webpack_require__("./src/ts/index.ts");
+/******/ 	var __webpack_exports__ = __webpack_require__("./src/ts/sobre.ts");
 /******/ 	
 /******/ })()
 ;

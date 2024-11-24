@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Resolve Tudo</title>
+    <link rel="shortcut icon" href="assets/images/icon_main.ico" type="image/x-icon">
+<script defer src="configuracoes.bundle.js"></script></head>
+<body>
+    <header>
+        <div id='divHeader'>
+            <div id='divHeaderLeftIcons'>		
+                <img id="imgHeaderIconPages" class="imgHeaderIcons" src="assets/images/icon_pages.png" alt="Imagem para acessar as páginas">
+
+                <div id="divHeaderPages">
+                    <a class="aHeaderPages">
+                        Calcular
+                    </a>
+
+                    <a class="aHeaderPages">
+                        Configurações
+                    </a>
+
+                    <a class="aHeaderPages">
+                        Sobre
+                    </a>
+                </div>
+            </div>
+            <img id='imgHeaderLogo' class="imgHeaderLogo" src="assets/images/logo_Resolve_Tudo.png" alt="Logotipo">
+            <div id='divHeaderRightIcons'>		
+                <img id="imgHeaderIconSobre" class="imgHeaderIcons" src="assets/images/icon_sobre.png" alt="Sobre">
+                <img id="imgHeaderIconConfig" class="imgHeaderIcons" src="assets/images/icon_config.png" alt="Config">
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <h1>Configurações</h1>
+        <p>
+            ajuste suas preferências de uso do site!
+        </p>
+
+        <div id="divConfiguracoes">
+            <div class="divMainConfiguration">
+                <h2>
+                    Notificações
+                </h2>
+
+                <div class="divMainConfigurationOne">
+                    <span>
+                        Ativar notificações
+                    </span>
+                    <input type="checkbox">
+                </div>
+
+                <div class="divMainConfigurationOne">
+                    <span>
+                        Tipo de notificação
+                    </span>
+                    <select name="selectConfigNotificationType" id="selectConfigNotificationType">
+                        <option value="email">Email</option>
+                        <option value="push">Push</option>
+                        <option value="sms">SMS</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <div class="divMainConfiguration">
+                <h2>
+                    Tema
+                </h2>
+
+                <div class="divMainConfigurationOne">
+                    <span>
+                    Tipo de tema
+                    </span>
+                    <select name="selectConfigThemeType" id="selectConfigThemeType">
+                        <option value="dark">Escuro</option>
+                        <option value="light">Claro</option>
+                        <option value="device">Seguir dispositivo</option>
+                        <option value="personal">Personalizado</option>
+                    </select>
+                </div>
+
+                <div class="divMainConfigurationOne">
+                    <span>
+                        Menu acessibilidade
+                    </span>
+                    <input type="checkbox">
+                </div>
+            </div>
+
+            <div class="divMainConfiguration">
+                <h2>
+                    Privacidade
+                </h2>
+
+                <div class="divMainConfigurationOne">
+                    <span>
+                        Perfil público
+                    </span>
+                    <input type="checkbox">
+                </div>
+
+                <div class="divMainConfigurationOne">
+                    <span>
+                        Informações públicas
+                    </span>
+                    <input type="checkbox">
+                </div>
+
+                <div class="divMainConfigurationOne">
+                    <span>
+                        Autenticação Multifatorial (2FA)
+                    </span>
+                    <input type="checkbox">
+                </div>
+            </div>
+
+            <div class="divMainConfiguration">
+                <h2>
+                    Idioma
+                </h2>
+
+                <div class="divMainConfigurationOne">
+                    <span>
+                        Conteúdo do site
+                    </span>
+                    <select name="selectConfigSiteLanguage" id="selectConfigSiteLanguage">
+                        <option value="pt">Português</option>
+                        <option value="en">English</option>
+                    </select>
+                </div>
+
+                <div class="divMainConfigurationOne">
+                    <span>
+                        Comunicações
+                    </span>
+                    <select name="selectConfigCommsLanguage" id="selectConfigCommsLanguage">
+                        <option value="pt">Português</option>
+                        <option value="en">English</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="divMainConfiguration">
+                <h2>
+                    Perfil
+                </h2>
+
+                <span class="configUsersTopics">Name</span>
+                <img class="configUsersTopicsImagens" src="assets/images/icon_user.png" alt="foto do usuário">
+                <span class="configUsersTopics">username</span>
+                <span class="configUsersTopics">email</span>
+                <input type="text" class="configUsersTopicsInputs" name="inputConfigUserBio" id="inputConfigUserBio">
+                <div class="divConfigUsersTopicsLinks">
+                    <a href="#">Instagram</a>
+                    <a href="#">Facebook</a>
+                    <a href="#">WhatsApp</a>
+                </div>
+
+                <!-- 
+                NAME
+                PHOTO
+                USER
+                EMAIL
+                BIO
+                LINKS -->
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div id='divFooter'>
+            <b>Resolve Tudo</b> - 2024 &copy - desenvolvido por 
+            <a 
+                id='aFooterLinkGithub'
+                href='https://github.com/vitukjkk/'
+                target="_blank">
+                    vitukjkkk
+            </a>
+        </div>
+    </footer>
+</body>

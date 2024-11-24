@@ -10,18 +10,33 @@
     <header>
         <div id='divHeader'>
             <div id='divHeaderLeftIcons'>		
-                <img class="imgHeaderIcons" src="assets/images/icon_pages.png" alt="Imagem para acessar as páginas">
+                <img id="imgHeaderIconPages" class="imgHeaderIcons" src="assets/images/icon_pages.png" alt="Imagem para acessar as páginas">
+
+                <div id="divHeaderPages">
+                    <a class="aHeaderPages">
+                        Calcular
+                    </a>
+
+                    <a class="aHeaderPages">
+                        Configurações
+                    </a>
+
+                    <a class="aHeaderPages">
+                        Sobre
+                    </a>
+                </div>
             </div>
-            <h1>Resolve Tudo</h1>
+            <img class="imgHeaderLogo" src="assets/images/logo_Resolve_Tudo.png" alt="Logotipo">
             <div id='divHeaderRightIcons'>		
-                <img class="imgHeaderIcons" src="assets/images/icon_sobre.png" alt="Sobre">
+                <img id="imgHeaderIconSobre" class="imgHeaderIcons" src="assets/images/icon_sobre.png" alt="Sobre">
+                <img id="imgHeaderIconConfig" class="imgHeaderIcons" src="assets/images/icon_config.png" alt="Config">
             </div>
         </div>
     </header>
 
     <main>
         <!-- ALGUMA FIRULA -->
-        <img src="">
+        
         <div
             id='divMainShow'>
                 <div
@@ -31,14 +46,14 @@
                             <span
                                 class='spanMainShow'>
                                     nossa missão é simplificar cálculos e torná-los mais simples de compreender e usá-los
-                            </span>
+                            </span><br>
                             <button>
                                 Conferir agora
                             </button>
                         </div>
                         <div id='divMainShowFirstRight'>
                             <p>WRLD</p>
-                            <img> <!-- BORDER-RADIUS 50% -->
+                            <img class="imgMainShow" src="assets/images/image_objective.png" alt="nosso objetivo">
                         </div>
                 </div>
 
@@ -46,8 +61,7 @@
                     id='divMainShowSecond'>
                         <div 
                             id='divMainShowSecondLeft'>
-                                <p>forgive me</p>
-                                <img> <!-- TRÊS SÍMBOLOS TECNOLOGIAS -->									
+                                <img class="imgMainShow" src="assets/images/image_tech.png" alt="tecnologias utilizadas">
                             </div>
                         <div
                             id='divMainShowSecondRight'>
@@ -58,7 +72,7 @@
                                 </span>
                                 <button>
                                     Explorar mais
-                                </button>									
+                                </button>						
                         </div>
                 </div>
 
@@ -75,8 +89,7 @@
                             </button>
                         </div>
                         <div>
-                            <p>ele nao fez nada de errado</p>
-                            <img> <!-- POR IMAGEM -->
+                            <img class="imgMainShow" src="assets/images/image_copilot.png" alt="copilot, seu ajudante!">
                         </div>
                 </div>
             </div>
@@ -88,10 +101,12 @@
         </p>
 
         <div class='divMainModules'>
-            <h2
-                id='h2MainModulesBasic' class='h2MainModules' onclick='showMainModule(1)'>
-                    (POR ÍCONES) Básica
-            </h2>
+            <div class="divMainModulesExpansion" id="divMainModulesBasic">
+                <img src="assets/images/icon_arrow.png" alt="botão expandir elementos" class="imgMainModulesExpand">
+                <h2 id='h2MainModulesBasic' class='h2MainModules'>
+                        Básica
+                </h2>
+            </div>
 
             <div
                 class='divMainModulesContent'>
@@ -125,94 +140,108 @@
                     </div>
             </div>
 
-            <h2 id='h2MainModulesMath' class='h2MainModules' onclick='showMainModule(2)'>
-                Matemática</h2>
-                <div class='divMainModulesContent'>
-                    <div class='divMainModulesOne'>
-                        <h3>Raiz</h3>
+            <div class="divMainModulesExpansion" id="divMainModulesBasic">
+                <img src="assets/images/icon_arrow.png" alt="botão expandir elementos" class="imgMainModulesExpand">
+                <h2 id='h2MainModulesMath' class='h2MainModules'>
+                        Matemática
+                </h2>
+            </div>
+
+            <div class='divMainModulesContent'>
+                <div class='divMainModulesOne'>
+                    <h3>Raiz</h3>
+                    <p>
+                        número elevado a uma potência que resulta em
+                    </p>
+                </div>
+
+                <div
+                    class='divMainModulesOne'>
+                        <h3>Potência</h3>
                         <p>
-                            número elevado a uma potência que resulta em
+                            eleva o número a um expoente
                         </p>
-                    </div>
-
-                    <div
-                        class='divMainModulesOne'>
-                            <h3>Potência</h3>
-                            <p>
-                                eleva o número a um expoente
-                            </p>
-                    </div>
-                    
-                    <div
-                        class='divMainModulesOne'>
-                            <h3>Porcentagem</h3>
-                            <p>
-                                representação de um número na fração de 100
-                            </p>
-                    </div>
-
-                    <div
-                        class='divMainModulesOne'>
-                            <h3>Módulo</h3>
-                            <p>
-                                quanto resta após sua divisão
-                            </p>
-                    </div>
-
-                    <div
-                        class='divMainModulesOne'>
-                            <h3>Fatorial</h3>
-                            <p>
-                                produto de todos os números inteiros de sua base
-                            </p>
-                    </div>
                 </div>
                 
-            <h2 id='h2MainModulesCiencia' class='h2MainModules' onclick='showMainModule(3)'>
-                Científica</h2>
-                <div class='divMainModulesContent'>
-                    <div class='divMainModulesOne'>
-                        <h3>Logaritmos</h3>
+                <div
+                    class='divMainModulesOne'>
+                        <h3>Porcentagem</h3>
                         <p>
-                            expoente necessário para obter um número a partir de uma base
+                            representação de um número na fração de 100
                         </p>
-                    </div>
-
-                    <div
-                        class='divMainModulesOne'>
-                            <h3>Funções trigonométricas</h3>
-                            <p>
-                                relacionam ângulos e lados de triângulos
-                            </p>
-                    </div>
-                    
-                    <div
-                        class='divMainModulesOne'>
-                            <h3>Funções hiperbólicas</h3>
-                            <p>
-                                semelhantes às trigonométricas, mas com hipérboles
-                            </p>
-                    </div>
-
-                    <div
-                        class='divMainModulesOne'>
-                            <h3>Potências fracionárias e decimais</h3>
-                            <p>
-                                quanto resta após sua divisão
-                            </p>
-                    </div>
-
-                    <div
-                        class='divMainModulesOne'>
-                            <h3>Fatorial</h3>
-                            <p>
-                                exponenciação com expoentes fracionários ou decimais
-                            </p>
-                    </div>
                 </div>
 
-            <h2 id='h2MainModulesFinance' class='h2MainModules' onclick='showMainModule(4)'>
-                Financeira</h2>
+                <div
+                    class='divMainModulesOne'>
+                        <h3>Módulo</h3>
+                        <p>
+                            quanto resta após sua divisão
+                        </p>
+                </div>
+
+                <div
+                    class='divMainModulesOne'>
+                        <h3>Fatorial</h3>
+                        <p>
+                            produto de todos os números inteiros de sua base
+                        </p>
+                </div>
+            </div>
+                
+            <div class="divMainModulesExpansion" id="divMainModulesBasic">
+                <img src="assets/images/icon_arrow.png" alt="botão expandir elementos" class="imgMainModulesExpand">
+                <h2 id='h2MainModulesBasic' class='h2MainModules'>
+                        Científica
+                </h2>
+            </div>
+
+            <div class='divMainModulesContent'>
+                <div class='divMainModulesOne'>
+                    <h3>Logaritmos</h3>
+                    <p>
+                        expoente necessário para obter um número a partir de uma base
+                    </p>
+                </div>
+
+                <div
+                    class='divMainModulesOne'>
+                        <h3>Funções trigonométricas</h3>
+                        <p>
+                            relacionam ângulos e lados de triângulos
+                        </p>
+                </div>
+                
+                <div
+                    class='divMainModulesOne'>
+                        <h3>Funções hiperbólicas</h3>
+                        <p>
+                            semelhantes às trigonométricas, mas com hipérboles
+                        </p>
+                </div>
+
+                <div
+                    class='divMainModulesOne'>
+                        <h3>Potências fracionárias e decimais</h3>
+                        <p>
+                            quanto resta após sua divisão
+                        </p>
+                </div>
+
+                <div
+                    class='divMainModulesOne'>
+                        <h3>Fatorial</h3>
+                        <p>
+                            exponenciação com expoentes fracionários ou decimais
+                        </p>
+                </div>
+            </div>
+
+            <div class="divMainModulesExpansion" id="divMainModulesBasic">
+                <img src="assets/images/icon_arrow.png" alt="botão expandir elementos" class="imgMainModulesExpand">
+                <h2 id='h2MainModulesFinance' class='h2MainModules'>
+                        Financeira
+                </h2>
+            </div>
 
             <div class='divMainModulesContent'>
                 <div class='divMainModulesOne'>
@@ -271,8 +300,12 @@
                 </div>
             </div>
 
-            <h2 id='h2MainModulesGraph' class='h2MainModules' onclick='showMainModule(5)'>
-                Gráfica</h2>
+            <div class="divMainModulesExpansion" id="divMainModulesBasic">
+                <img src="assets/images/icon_arrow.png" alt="botão expandir elementos" class="imgMainModulesExpand">
+                <h2 id='h2MainModulesGraph' class='h2MainModules'>
+                        Gráfica
+                </h2>
+            </div>
 
             <div class='divMainModulesContent'>
                 <div
@@ -324,8 +357,12 @@
                 </div>
             </div>
 
-            <h2 id='h2MainModulesStatic' class='h2MainModules' onclick='showMainModule(6)'>
-                Estatística</h2>
+            <div class="divMainModulesExpansion" id="divMainModulesBasic">
+                <img src="assets/images/icon_arrow.png" alt="botão expandir elementos" class="imgMainModulesExpand">
+                <h2 id='h2MainModulesStatic' class='h2MainModules'>
+                        Estatística
+                </h2>
+            </div>
             
             <div class='divMainModulesContent'>
                 <div
@@ -368,73 +405,90 @@
                         </p>
                 </div>
             </div>
-
-            <h2 id='h2MainModulesStatic' class='h2MainModules' onclick='showMainModule(7)'>
-                Data</h2>
+            
+            <div class="divMainModulesExpansion" id="divMainModulesBasic">
+                <img src="assets/images/icon_arrow.png" alt="botão expandir elementos" class="imgMainModulesExpand">
+                <h2 id='h2MainModulesEng' class='h2MainModules'>
+                        Engenharia
+                </h2>
+            </div>
 
             <div class='divMainModulesContent'>
-                <div
-                    class='divMainModulesOne'>
-                        <h3>Média</h3>
-                        <p>
-                            soma dos valores divida pelo número de valores
-                        </p>
-                </div>
-
-                <div
-                    class='divMainModulesOne'>
-                        <h3>Mediana</h3>
-                        <p>
-                            valor central de um conjunto de dados ordenados
-                        </p>
-                </div>
-
-                <div
-                    class='divMainModulesOne'>
-                        <h3>Moda</h3>
-                        <p>
-                            valor que aparece com maior frequência em um conjunto de dados
-                        </p>
-                </div>
-
-                <div
-                    class='divMainModulesOne'>
-                        <h3>Máximo</h3>
-                        <p>
-                            maior valor de um conjunto de dados
-                        </p>
-                </div>
-                
-                <div
-                    class='divMainModulesOne'>
-                        <h3>Mímimo</h3>
-                        <p>
-                            menor valor em um conjunto de dados
-                        </p>
-                </div>
-            </div>
-            
-            <h2 id='h2MainModulesEngenharia' class='h2MainModules' onclick='showMainModule(8)'>
-                Engenharia</h2>
-                <div class='divMainModulesContent'>
+                <div class="divMainModulesOne">
+                    <h3>coming soon</h3>
                     <p>em breve...</p>
                 </div>
+            </div>
         </div>
 
         <div class='divMainFeedback'>
-            <form>
-                <label for='inputMainFeedback'>deixe sua opinião! ela é muito valiosa para nós :)</label>
-                <textarea
-                    id='inputMainFeedback'
-                    name='inputMainFeedback'
-                    type='text'
-                    placeholder="digite sua opinião!"></textarea><br>
-                <button
-                    href='https://wa.me/5561994030749?text=Olá%2C%20gostaria%20de%20dar%20meu%20feedback!'>Enviar feedback</button>
-            </form>				
+            <label for='inputMainFeedback'>deixe sua opinião! ela é muito valiosa para nós :)</label>
+            <textarea
+                id='inputMainFeedback'
+                name='inputMainFeedback'
+                placeholder="digite sua opinião!"></textarea><br>
+            <button id="btnIndexFeedback">
+                Enviar feedback
+            </button>
         </div>		
 
-        <div class='divMainContacts'>POR CONTATOS</div>
+        <div class='divMainContacts'>
+
+            <h2>Contato</h2>
+            <p>
+                caso tenha alguma dúvida ou sugestão, entre em contato comigo!
+            </p>
+
+            <div class="divMainContactsContainer">
+                <div class="divMainOneContact">
+                    <a href="https://wa.me/5561994030749?text=ola!%20vim%20do%20Resolve%20Tudo!" target="_blank">
+                        <img src="assets/images/zap pequeno.png" alt="ícone whatsapp" >
+                    </a>
+                </div>
+
+                <div class="divMainOneContact">
+                    <a href="https://instagram.com/vitukjkkk" target="_blank">
+                        <img src="assets/images/ig pequeno.png" alt="ícone instagram">
+                    </a>
+                </div>
+
+                <div class="divMainOneContact">
+                    <a id="imgMainContactGitHub" href="https://github.com/vitukjkk" target="_blank">
+                        <img src="assets/images/github pequeno.png" alt="ícone github">
+                    </a>
+                </div>
+
+                <div class="divMainOneContact">
+                    <a href="https://www.linkedin.com/in/vitor-colombelli-75b115253/" target="_blank">
+                        <img src="assets/images/linkedin pequeno.png" alt="ícone tiktok">
+                    </a>
+                </div>
+
+                <div class="divMainOneContact">
+                    <a href="https://www.facebook.com/seituuu.u/" target="_blank">
+                        <img src="assets/images/facebook pequeno.png" alt="ícone facebook">
+                    </a>
+                </div>
+                
+                <div class="divMainOneContact">
+                    <a href="https://youtube.com/%40vitukjkkk" target="_blank">
+                        <img src="assets/images/youtube pequeno.png" alt="ícone youtube">
+                    </a>
+                </div>
+
+                <div class="divMainOneContact">
+                    <a href="https://www.tiktok.com/%40vituuuuuu.u?lang=pt-BR" target="_blank">
+                        <img src="assets/images/tik-tok pequeno.png" alt="ícone tiktok">
+                    </a>
+                </div>
+
+                <div class="divMainOneContact">
+                    <a href="https://br.pinterest.com/vitukjkkk/" target="_blank">
+                        <img src="assets/images/pinterest pequeno.png" alt="ícone tiktok">
+                    </a>
+                </div>
+            </div>
+        </div>
     </main>
         
     <footer>

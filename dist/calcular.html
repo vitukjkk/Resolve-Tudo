@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Resolve Tudo</title>
+    <link rel="shortcut icon" href="assets/images/icon_main.ico" type="image/x-icon">
+<script defer src="calcular.bundle.js"></script></head>
+<body>
+    <header>
+        <div id='divHeader'>
+            <div id='divHeaderLeftIcons'>		
+                <img id="imgHeaderIconPages" class="imgHeaderIcons" src="assets/images/icon_pages.png" alt="Imagem para acessar as páginas">
+
+                <div id="divHeaderPages">
+                    <a class="aHeaderPages">
+                        Calcular
+                    </a>
+
+                    <a class="aHeaderPages">
+                        Configurações
+                    </a>
+
+                    <a class="aHeaderPages">
+                        Sobre
+                    </a>
+                </div>
+            </div>
+            <img id='imgHeaderLogo' class="imgHeaderLogo" src="assets/images/logo_Resolve_Tudo.png" alt="Logotipo">
+            <div id='divHeaderRightIcons'>		
+                <img id="imgHeaderIconSobre" class="imgHeaderIcons" src="assets/images/icon_sobre.png" alt="Sobre">
+                <img id="imgHeaderIconConfig" class="imgHeaderIcons" src="assets/images/icon_config.png" alt="Config">
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <h1>Calcular</h1>
+        <p>
+            faça cálculos de diversas áreas, basta escolher o módulo
+        </p>
+        <select id="calcularSelect">
+            <option value="basica">Básica</option>
+            <option value="matematica">Matemática</option>
+            <option value="cientifica">Científica</option>
+            <option value="financeira">Financeira</option>
+            <option value="grafica">Gráfica</option>
+            <option value="estatistica">Estatística</option>
+            <option value="engenharia">Engenharia</option>
+        </select><br>
+        
+        <input id="inputCalcularMain" name="inputCalcularMain" type="text" class="inputMainValue"><br>
+
+        <div class="divMainCalcular">
+            <button class="basicaButtons">+</button>
+            <button class="basicaButtons">-</button>
+            <button class="basicaButtons">/</button>
+            <button class="basicaButtons">*</button>
+            <button class="basicaButtons">(</button>
+            <button class="basicaButtons">)</button>
+            <button class="basicaButtons">,</button>
+            <button class="basicaButtons">.</button>
+        </div>
+
+        <div class="divMainCalcular">
+            <p>Fator</p>
+            <input id="inputMathSecond" name="inputMathSecond" type="text"><br>
+            <button class="mathButtons">R</button>
+            <button class="mathButtons">^</button>
+            <button class="mathButtons">%</button>
+            <button class="mathButtons">M</button>
+            <button class="mathButtons">!</button>
+        </div>
+
+        <div class="divMainCalcular">
+            <p>em breve!!</p>
+        </div>
+
+        <div class="divMainCalcular">
+            <div>
+                <span class="spanSecondInput">insira a taxa</span>
+                <input id="inputFinanceTaxa" name="inputFinanceTaxa" type="text" class="inputSecondValue">
+            </div>    
+            <div>
+                <span class="spanSecondInput">insira o período</span>
+                <input id="inputFinancePeriodo" name="inputFinancePeriodo" type="text" class="inputSecondValue">
+            </div>
+
+            <button class="financebuttons">JS</button>
+            <button class="financebuttons">JC</button>
+            <button class="financebuttons">VP</button>
+            <button class="financebuttons">VF</button>
+            <button class="financebuttons">A</button>
+        </div>
+
+        <div class="divMainCalcular">
+            <p>em breve!!</p>
+        </div>
+
+        <div class="divMainCalcular"> <!-- ESTATÍSTICA -->
+            <p>separe os valores com -</p>
+            <button class="staticbuttons">MÉD</button>
+            <button class="staticbuttons">MED</button>
+            <button class="staticbuttons">MODA</button>
+            <button class="staticbuttons">VAR</button>
+            <button class="staticbuttons">DP</button>
+            <button class="staticbuttons">CV</button>
+            <button class="staticbuttons">MAX</button>
+            <button class="staticbuttons">MIN</button>
+        </div>
+
+
+        <div class="divMainCalcular">
+            <p>em breve!!</p>
+        </div>
+        
+        <button class="fundamentalButtons">A</button>
+        <button class="fundamentalButtons">L</button>
+        <button class="fundamentalButtons">=</button>
+    </main>
+
+    <footer>
+        <div id='divFooter'>
+            <b>Resolve Tudo</b> - 2024 &copy - desenvolvido por 
+            <a 
+                id='aFooterLinkGithub'
+                href='https://github.com/vitukjkk/'
+                target="_blank">
+                    vitukjkkk
+            </a>
+        </div>
+    </footer>
+</body>
