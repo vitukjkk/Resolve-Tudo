@@ -22,3 +22,10 @@ calcular nunca foi tão fácil!
 ## 🖊️ - Funcionalidades / Cálculos / Módulos
 - Básica: soma, subtração, multiplicação e divisão 
 - Matemática: radiciação, exponenciação, porcentagem, módulos e fatorial
+- Científica: em implementação
+- Financeira: juros simples e compostos, valor presente e futuro, amortização
+- Gráfica: em breve!
+- Estatística: média, moda, medianaz desvio padrão, variância e coeficiente, máximo e mínimo
+Engenharia: vem por aí 🫠
+
+PS: esses são os módulos que botei até agora, com o tempo e sugestões adiciono mais!
