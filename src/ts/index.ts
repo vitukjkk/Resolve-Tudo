@@ -80,7 +80,7 @@ btnIndexFeedback.onclick = () => {
     window.open(url, '_blank');
 };
 
-imgHeaderIconPages.onpointerup = () => {
+imgHeaderIconPages.onclick = () => {
     if(pagesHeaderVisible) {
         pagesHeaderVisible = false;
         divHeaderPages.style.display = 'none';
