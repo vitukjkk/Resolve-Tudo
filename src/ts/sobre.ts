@@ -26,7 +26,7 @@ imgHeaderLogo.onclick = () => {
     window.location.href = './index.html';
 }
 
-imgHeaderIconPages.onpointerup = () => {
+imgHeaderIconPages.onclick = () => {
     if(pagesHeaderVisible) {
         pagesHeaderVisible = false;
         divHeaderPages.style.display = 'none';

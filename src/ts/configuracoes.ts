@@ -26,7 +26,7 @@ imgHeaderIconSobre.onclick = () => {
     window.location.href = './sobre.html';
 }
 
-imgHeaderIconPages.onpointerup = () => {
+imgHeaderIconPages.onclick = () => {
     if(pagesHeaderVisible) {
         pagesHeaderVisible = false;
         divHeaderPages.style.display = 'none';
